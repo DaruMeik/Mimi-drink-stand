@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41e8b46714d1a9d4aa0898b0f3f314e4, type: 3}
+  m_Name: ItemLibrary
+  m_EditorClassIdentifier: 
+  itemLibrary:
+  - itemName: Trash
+    sprite: {fileID: -264730723, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 0
+  - itemName: Ice
+    sprite: {fileID: 2036494017, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 0
+  - itemName: Soda
+    sprite: {fileID: -1592193369, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 0
+  - itemName: Milk
+    sprite: {fileID: 239766993, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 0
+  - itemName: Hot Cup
+    sprite: {fileID: 2003103275, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 0
+  - itemName: Hot Coffee
+    sprite: {fileID: 1460713011, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 2
+  - itemName: Hot Milk
+    sprite: {fileID: 721051390, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 0
+  - itemName: Hot Latte
+    sprite: {fileID: 1872520221, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 3
+  - itemName: Cold Cup
+    sprite: {fileID: -1593890116, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 0
+  - itemName: Cold Coffee
+    sprite: {fileID: -235588406, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 0
+  - itemName: Cold Milk
+    sprite: {fileID: -930243604, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 0
+  - itemName: Cold Latte
+    sprite: {fileID: -1544026208, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 0
+  - itemName: Iced Cup
+    sprite: {fileID: -1669787809, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 0
+  - itemName: Iced Coffee
+    sprite: {fileID: -1134323509, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 3
+  - itemName: Iced Latte
+    sprite: {fileID: 1222880114, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 4
+  - itemName: Iced Soda
+    sprite: {fileID: -1972066502, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 2
+  - itemName: Blueberry Soda
+    sprite: {fileID: 1303367981, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 3
+  - itemName: Kiwi Soda
+    sprite: {fileID: -1908109928, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 3
+  - itemName: Strawberry Soda
+    sprite: {fileID: 178334850, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 3
+  - itemName: Orange Soda
+    sprite: {fileID: 2034299573, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 3
+  - itemName: Small Cup
+    sprite: {fileID: -2118277045, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 0
+  - itemName: Big Cup
+    sprite: {fileID: 890069209, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 0
+  - itemName: Shaved Ice Small
+    sprite: {fileID: 1450998, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 2
+  - itemName: Shaved Ice Big
+    sprite: {fileID: 181934880, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 2
+  - itemName: Shaved Ice Small Blueberry
+    sprite: {fileID: -1769259924, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 3
+  - itemName: Shaved Ice Small Kiwi
+    sprite: {fileID: -804020660, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 3
+  - itemName: Shaved Ice Small Strawberry
+    sprite: {fileID: -1474463964, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 3
+  - itemName: Shaved Ice Small Orange
+    sprite: {fileID: -800726337, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 3
+  - itemName: Shaved Ice Big Blueberry
+    sprite: {fileID: 758463787, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 3
+  - itemName: Shaved Ice Big Kiwi
+    sprite: {fileID: 929717047, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 3
+  - itemName: Shaved Ice Big Strawberry
+    sprite: {fileID: -835867694, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 3
+  - itemName: Shaved Ice Big Orange
+    sprite: {fileID: 978127659, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 3
+  - itemName: Blueberry
+    sprite: {fileID: 1239114629, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 0
+  - itemName: Kiwi
+    sprite: {fileID: 256319076, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 0
+  - itemName: Strawberry
+    sprite: {fileID: -1835905594, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 0
+  - itemName: Orange
+    sprite: {fileID: 1312526127, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
+    price: 0

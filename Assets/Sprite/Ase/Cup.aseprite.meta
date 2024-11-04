@@ -123,7 +123,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Cup_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: 0.24242425}
+    pivot: {x: 0.5625, y: 0.36363637}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -143,7 +143,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Cup_Frame_1
     originalName: 
-    pivot: {x: 0.5625, y: 0.107142866}
+    pivot: {x: 0.625, y: 0.25}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -173,16 +173,16 @@ ScriptedImporter:
     - name: Cup_Frame_0
       frameIndex: 0
       cellRect:
-        x: 0
-        y: -8
+        x: -1
+        y: -12
         width: 16
         height: 33
       spriteId: 95c1a484c91675144bf5d20c96aba15e
     - name: Cup_Frame_1
       frameIndex: 1
       cellRect:
-        x: -1
-        y: -3
+        x: -2
+        y: -7
         width: 16
         height: 28
       spriteId: 401e2f86208c761408d59ce4faf00c16
@@ -192,4 +192,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 16, y: 32}
+  canvasSize: {x: 16, y: 36}

@@ -6,9 +6,10 @@ public class PlayerFridgeState : PlayerBaseState
     {
         player.ResetArrowHighlight();
         player.DisableKeyPrompt();
-        player.EnableArrow("Up", "Soda");
-        player.EnableArrow("Down", "Ice");
-        player.EnableArrow("Left", "Milk");
+        //player.EnableArrow("Up", "Egg");
+        player.EnableArrow("Down", "Return");
+        player.EnableArrow("Left", "Soda");
+        player.EnableArrow("Right", "Ice");
     }
     public override void UpdateState(Player player)
     {
@@ -23,55 +24,36 @@ public class PlayerFridgeState : PlayerBaseState
             switch (player.currentInput)
             {
                 case "Up":
-                    if (player.currentItem == "Iced Cup")
-                    {
-                        player.ChangeCurrentItem("Iced Soda");
-                    }
-                    else
-                    {
-                        player.ChangeCurrentItem("Trash");
-                    }
-                    player.SwitchState(player.movementState);
+                    //if (player.currentItem == "")
+                    //{
+                    //    player.ChangeCurrentItem("Egg");
+                    //}
+                    //else
+                    //{
+                    //    player.ChangeCurrentItem("Trash");
+                    //}
+                    //player.SwitchState(player.movementState);
                     break;
                 case "Down":
-                    if (player.currentItem == "")
-                    {
-                        player.ChangeCurrentItem("Ice");
-                    }
-                    else if (player.currentItem == "Cold Coffee")
-                    {
-                        player.ChangeCurrentItem("Iced Coffee");
-                    }
-                    else if (player.currentItem == "Cold Latte")
-                    {
-                        player.ChangeCurrentItem("Iced Latte");
-                    }
-                    else if (player.currentItem == "Cold Cup")
-                    {
-                        player.ChangeCurrentItem("Iced Cup");
-                    }
-                    else
-                    {
-                        player.ChangeCurrentItem("Trash");
-                    }
                     player.SwitchState(player.movementState);
                     break;
                 case "Left":
-                    if (player.currentItem == "Hot Coffee")
+                    if (player.currentItem == "Iced Glass")
                     {
-                        player.ChangeCurrentItem("Hot Latte");
-                    }
-                    else if (player.currentItem == "Cold Coffee")
-                    {
-                        player.ChangeCurrentItem("Cold Latte");
-                    }
-                    else
-                    {
-                        player.ChangeCurrentItem("Trash");
+                        player.ChangeCurrentItem("Iced Soda");
                     }
                     player.SwitchState(player.movementState);
                     break;
                 case "Right":
+                    if (player.currentItem == "")
+                    {
+                        player.ChangeCurrentItem("Ice");
+                    }
+                    else if (player.currentItem == "Cold Glass")
+                    {
+                        player.ChangeCurrentItem("Iced Glass");
+                    }
+                    player.SwitchState(player.movementState);
                     break;
             }
         }

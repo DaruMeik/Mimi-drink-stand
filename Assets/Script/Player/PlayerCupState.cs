@@ -8,8 +8,9 @@ public class PlayerCupState : PlayerBaseState
     {
         player.ResetArrowHighlight();
         player.DisableKeyPrompt();
+        player.EnableArrow("Up", "Return");
         player.EnableArrow("Right", "Hot Cup");
-        player.EnableArrow("Left", "Cold Cup");
+        player.EnableArrow("Left", "Cold Glass");
     }
     public override void UpdateState(Player player)
     {
@@ -25,21 +26,14 @@ public class PlayerCupState : PlayerBaseState
             switch (player.currentInput)
             {
                 case "Up":
+                    player.SwitchState(player.movementState);
                     break;
                 case "Down":
                     break;
                 case "Left":
                     if (player.currentItem == "")
                     {
-                        player.ChangeCurrentItem("Cold Cup");
-                    }
-                    else if (player.currentItem == "Ice")
-                    {
-                        player.ChangeCurrentItem("Iced Cup");
-                    }
-                    else
-                    {
-                        player.ChangeCurrentItem("Trash");
+                        player.ChangeCurrentItem("Cold Glass");
                     }
                     player.SwitchState(player.movementState);
                     break;
@@ -47,10 +41,6 @@ public class PlayerCupState : PlayerBaseState
                     if (player.currentItem == "")
                     {
                         player.ChangeCurrentItem("Hot Cup");
-                    }
-                    else
-                    {
-                        player.ChangeCurrentItem("Trash");
                     }
                     player.SwitchState(player.movementState);
                     break;

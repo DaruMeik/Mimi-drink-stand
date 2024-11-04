@@ -8,10 +8,10 @@ public class PlayerSyrupState : PlayerBaseState
     {
         player.ResetArrowHighlight();
         player.DisableKeyPrompt();
-        player.EnableArrow("Up", "Blueberry");
+        player.EnableArrow("Up", "Return");
         player.EnableArrow("Down", "Kiwi");
         player.EnableArrow("Left", "Strawberry");
-        player.EnableArrow("Right", "Orange");
+        player.EnableArrow("Right", "Blueberry");
     }
     public override void UpdateState(Player player)
     {
@@ -26,22 +26,6 @@ public class PlayerSyrupState : PlayerBaseState
             switch (player.currentInput)
             {
                 case "Up":
-                    if (player.currentItem == "Shaved Ice Small")
-                    {
-                        player.ChangeCurrentItem("Shaved Ice Small Blueberry");
-                    }
-                    else if (player.currentItem == "Shaved Ice Big")
-                    {
-                        player.ChangeCurrentItem("Shaved Ice Big Blueberry");
-                    }
-                    else if (player.currentItem == "Iced Soda")
-                    {
-                        player.ChangeCurrentItem("Blueberry Soda");
-                    }
-                    else
-                    {
-                        player.ChangeCurrentItem("Trash");
-                    }
                     player.SwitchState(player.movementState);
                     break;
                 case "Down":
@@ -56,10 +40,6 @@ public class PlayerSyrupState : PlayerBaseState
                     else if (player.currentItem == "Iced Soda")
                     {
                         player.ChangeCurrentItem("Kiwi Soda");
-                    }
-                    else
-                    {
-                        player.ChangeCurrentItem("Trash");
                     }
                     player.SwitchState(player.movementState);
                     break;
@@ -76,28 +56,20 @@ public class PlayerSyrupState : PlayerBaseState
                     {
                         player.ChangeCurrentItem("Strawberry Soda");
                     }
-                    else
-                    {
-                        player.ChangeCurrentItem("Trash");
-                    }
                     player.SwitchState(player.movementState);
                     break;
                 case "Right":
                     if (player.currentItem == "Shaved Ice Small")
                     {
-                        player.ChangeCurrentItem("Shaved Ice Small Orange");
+                        player.ChangeCurrentItem("Shaved Ice Small Blueberry");
                     }
                     else if (player.currentItem == "Shaved Ice Big")
                     {
-                        player.ChangeCurrentItem("Shaved Ice Big Orange");
+                        player.ChangeCurrentItem("Shaved Ice Big Blueberry");
                     }
                     else if (player.currentItem == "Iced Soda")
                     {
-                        player.ChangeCurrentItem("Orange Soda");
-                    }
-                    else
-                    {
-                        player.ChangeCurrentItem("Trash");
+                        player.ChangeCurrentItem("Blueberry Soda");
                     }
                     player.SwitchState(player.movementState);
                     break;

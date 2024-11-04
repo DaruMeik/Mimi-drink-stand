@@ -123,14 +123,14 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Syrup_Frame_0
     originalName: 
-    pivot: {x: 0.61538464, y: -1.1666667}
+    pivot: {x: 0.5, y: -0.6666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 13
+      width: 12
       height: 12
     spriteID: 15c1ca53970a3f7459b823922a474fa2
     spriteBone: []
@@ -143,14 +143,14 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Syrup_Frame_1
     originalName: 
-    pivot: {x: 0.61538464, y: -1.1666667}
+    pivot: {x: 0.5, y: -0.6666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 24
-      width: 13
+      width: 12
       height: 12
     spriteID: 192484dcaa8814849955891e844a3fb3
     spriteBone: []
@@ -173,17 +173,17 @@ ScriptedImporter:
     - name: Syrup_Frame_0
       frameIndex: 0
       cellRect:
-        x: 0
-        y: 14
-        width: 13
+        x: 2
+        y: 8
+        width: 12
         height: 12
       spriteId: 15c1ca53970a3f7459b823922a474fa2
     - name: Syrup_Frame_1
       frameIndex: 1
       cellRect:
-        x: 0
-        y: 14
-        width: 13
+        x: 2
+        y: 8
+        width: 12
         height: 12
       spriteId: 192484dcaa8814849955891e844a3fb3
     linkedCells: []

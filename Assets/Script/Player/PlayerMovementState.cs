@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class PlayerMovementState : PlayerBaseState
 {
-    private InteractableObj highlightObjL;
-    private InteractableObj highlightObjR;
+    private InteractableObj highlightObjU;
+    private InteractableObj highlightObjD;
     public override void EnterState(Player player)
     {
         player.eventBroadcast.TurnOffUINoti();
+        player.ChangeArrowPos("Normal");
         CheckForObj(player.transform.position, player);
     }
     public override void UpdateState(Player player)
@@ -26,22 +27,28 @@ public class PlayerMovementState : PlayerBaseState
         switch (player.currentInput)
         {
             case "Up":
-                if (Physics2D.OverlapPoint(player.transform.position + Vector3.up, LayerMask.GetMask("Ground")))
-                    player.transform.position += Vector3.up;
-                CheckForObj(player.transform.position, player);
+                if (highlightObjU != null)
+                {
+                    player.ChangeArrowPos("Up");
+                    highlightObjU.Interact(player);
+                }
                 break;
             case "Down":
-                if (Physics2D.OverlapPoint(player.transform.position + Vector3.down, LayerMask.GetMask("Ground")))
-                    player.transform.position += Vector3.down;
-                CheckForObj(player.transform.position, player);
+                if (highlightObjD != null)
+                {
+                    player.ChangeArrowPos("Down");
+                    highlightObjD.Interact(player);
+                }
                 break;
             case "Left":
-                if (highlightObjL != null)
-                    highlightObjL.Interact(player);
+                if (Physics2D.OverlapPoint(player.transform.position + Vector3.left, LayerMask.GetMask("Ground")))
+                    player.transform.position += Vector3.left * 1.25f;
+                CheckForObj(player.transform.position, player);
                 break;
             case "Right":
-                if (highlightObjR != null)
-                    highlightObjR.Interact(player);
+                if (Physics2D.OverlapPoint(player.transform.position + Vector3.right, LayerMask.GetMask("Ground")))
+                    player.transform.position += Vector3.right * 1.25f;
+                CheckForObj(player.transform.position, player);
                 break;
         }
     }
@@ -50,34 +57,34 @@ public class PlayerMovementState : PlayerBaseState
     }
     private void CheckForObj(Vector3 pos, Player player)
     {
-        if (highlightObjL != null)
+        if (highlightObjU != null)
         {
-            highlightObjL.TurnOffHighlight();
-            highlightObjL = null;
+            highlightObjU.TurnOffHighlight();
+            highlightObjU = null;
         }
-        if (highlightObjR != null)
+        if (highlightObjD != null)
         {
-            highlightObjR.TurnOffHighlight();
-            highlightObjR = null;
+            highlightObjD.TurnOffHighlight();
+            highlightObjD = null;
         }
         player.DisableKeyPrompt();
 
         Collider2D hit;
-        hit = Physics2D.OverlapPoint(pos + Vector3.left, LayerMask.GetMask("Interactable"));
+        hit = Physics2D.OverlapPoint(pos + Vector3.up, LayerMask.GetMask("Interactable"));
         if (hit)
         {
             InteractableObj obj = hit.gameObject.GetComponent<InteractableObj>();
-            highlightObjL = obj;
-            highlightObjL.TurnOnHighlight();
-            player.EnableKeyPrompt("Left");
+            highlightObjU = obj;
+            highlightObjU.TurnOnHighlight();
+            player.EnableKeyPrompt("Up");
         }
-        hit = Physics2D.OverlapPoint(pos + Vector3.right, LayerMask.GetMask("Interactable"));
+        hit = Physics2D.OverlapPoint(pos + Vector3.down, LayerMask.GetMask("Interactable"));
         if (hit)
         {
             InteractableObj obj = hit.gameObject.GetComponent<InteractableObj>();
-            highlightObjR = obj;
-            highlightObjR.TurnOnHighlight();
-            player.EnableKeyPrompt("Right");
+            highlightObjD = obj;
+            highlightObjD.TurnOnHighlight();
+            player.EnableKeyPrompt("Down");
         }
     }
 }

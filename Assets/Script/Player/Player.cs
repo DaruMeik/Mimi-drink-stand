@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -10,10 +11,12 @@ public class Player : MonoBehaviour
     public PlayerIceState iceState = new PlayerIceState();
     public PlayerSyrupState syrupState = new PlayerSyrupState();
     public PlayerCupState cupState = new PlayerCupState();
+    public PlayerCoffeeState coffeeState = new PlayerCoffeeState();
 
     public string currentInput { get; private set; }
     public string currentItem { get; private set; }
-    public Customer currentCustomer { get; private set; }
+    //public Customer currentCustomer { get; private set; }
+    public Queue<Customer> currentCustomers = new Queue<Customer> { };
 
     [Header("Additional UI")]
     [SerializeField] private ItemDisplay thoughtItem;
@@ -23,6 +26,7 @@ public class Player : MonoBehaviour
 
     [Header("Arrow")]
     public SpriteRenderer playerSprite;
+    [SerializeField] private Transform everyPrompt;
     [SerializeField] private GameObject upArrow;
     [SerializeField] private GameObject upKeyPrompt;
     public ItemChoice upItem;
@@ -43,7 +47,6 @@ public class Player : MonoBehaviour
     private void OnEnable()
     {
         eventBroadcast.createOrder += ReceiveOrder;
-        eventBroadcast.orderCancel += RemoveOrder;
         eventBroadcast.turnOffUI += DisableArrow;
         eventBroadcast.turnOffUI += DisableKeyPrompt;
         eventBroadcast.turnOffUI += DisableRecipes;
@@ -54,7 +57,6 @@ public class Player : MonoBehaviour
     private void OnDisable()
     {
         eventBroadcast.createOrder -= ReceiveOrder;
-        eventBroadcast.orderCancel -= RemoveOrder;
         eventBroadcast.turnOffUI -= DisableArrow;
         eventBroadcast.turnOffUI -= DisableKeyPrompt;
         eventBroadcast.turnOffUI -= DisableRecipes;
@@ -65,7 +67,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         currentInput = "";
-        RemoveOrder();
+        currentCustomers.Clear();
         DisableRecipes();
         ChangeCurrentItem("");
         SwitchState(pauseState);
@@ -82,6 +84,8 @@ public class Player : MonoBehaviour
             currentInput = "Left";
         if (systemSetting.PressRight())
             currentInput = "Right";
+        if(currentInput!="")
+            Debug.Log(currentInput);
         if (systemSetting.PressCheat())
             systemSetting.finishBaseGame = true;
         currentState.UpdateState(this);
@@ -159,6 +163,21 @@ public class Player : MonoBehaviour
         resultPage.gameObject.SetActive(true);
         SwitchState(endState);
     }
+    public void ChangeArrowPos(string dir)
+    {
+        switch (dir)
+        {
+            case "Up":
+                everyPrompt.localPosition = new Vector3(0f, 1f, 0f);
+                break;
+            case "Down":
+                everyPrompt.localPosition = new Vector3(0f, -1f, 0f);
+                break;
+            case "Normal":
+                everyPrompt.localPosition = Vector3.zero;
+                break;
+        }
+    }
     public void EnableArrow(string dir, string item)
     {
         EnableKeyPrompt(dir);
@@ -202,10 +221,6 @@ public class Player : MonoBehaviour
     }
     private void ReceiveOrder(Customer c)
     {
-        currentCustomer = c;
-    }
-    public void RemoveOrder()
-    {
-        currentCustomer = null;
+        currentCustomers.Enqueue(c);
     }
 }

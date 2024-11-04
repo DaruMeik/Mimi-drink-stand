@@ -20,61 +20,32 @@ public class Regi : InteractableObj
     }
     public override void Interact(Player player)
     {
-        if (player.currentCustomer == null || player.currentItem == "")
+        player.SwitchState(player.movementState);
+        if(player.currentItem == "")
         {
-            player.ChangeCurrentItem("");
             return;
         }
-        if (player.currentItem == player.currentCustomer.order.itemName)
+        if (player.currentCustomers.Count > 0)
         {
-            int bonus = 0;
-            if (player.currentCustomer.satisfaction > 0.9f)
+            Customer customer = player.currentCustomers.Dequeue();
+            string order = customer.order.itemName;
+            if (order == player.currentItem)
             {
-                bonus = 40;
-                player.currentCustomer.SpawnReview("Extreme");
-                dayLogic.AdjustHypeMeter(0.3f);
-            }
-            else if (player.currentCustomer.satisfaction > 0.8f)
-            {
-                bonus = 20;
-                player.currentCustomer.SpawnReview("Extreme");
-                dayLogic.AdjustHypeMeter(0.2f);
-            }
-            else if (player.currentCustomer.satisfaction > 0.6f)
-            {
-                player.currentCustomer.SpawnReview("Good");
-                dayLogic.AdjustHypeMeter(0.1f);
-            }
-            else if (player.currentCustomer.satisfaction > 0.4)
-            {
-                player.currentCustomer.SpawnReview("Good");
-                dayLogic.AdjustHypeMeter(-0.25f);
-            }
-            else if (player.currentCustomer.satisfaction > 0.2f)
-            {
-                player.currentCustomer.SpawnReview("Good");
-                dayLogic.AdjustHypeMeter(-0.4f);
+                Item i = Array.Find(itemLibrary.itemLibrary, x => x.itemName == player.currentItem);
+                Debug.Assert(i != null);
+                dayLogic.AdjustMoney(i.price);
+                dayLogic.AdjustHypeMeter(+0.1f);
+                success.Play();
             }
             else
             {
-                player.currentCustomer.SpawnReview("Good");
-                dayLogic.AdjustHypeMeter(-0.5f);
+                dayLogic.AdjustHP(-1);
+                dayLogic.AdjustHypeMeter(-0.4f);
+                fail.Play();
             }
-            Item i = Array.Find(itemLibrary.itemLibrary, x => x.itemName == player.currentItem);
-            Debug.Assert(i != null);
-            dayLogic.AdjustMoney(i.price * (100+bonus));
-            success.Play();
-        }
-        else
-        {
-            player.currentCustomer.SpawnReview("Bad");
-            dayLogic.AdjustHP(-1);
-            dayLogic.AdjustHypeMeter(-0.5f);
-            fail.Play();
+            customer.LeaveTheShop();
         }
         player.ChangeCurrentItem("");
-        player.RemoveOrder();
-        player.eventBroadcast.OrderCompleteNoti();
     }
     private void ChangeVolume()
     {

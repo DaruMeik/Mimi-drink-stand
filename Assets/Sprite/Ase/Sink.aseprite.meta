@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Sink
     originalName: 
-    pivot: {x: 0.61538464, y: -1}
+    pivot: {x: 0.5, y: -0.923077}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 13
-      height: 12
+      width: 12
+      height: 13
     spriteID: 97f4d0092faf5ce4196e3920a8d9c66d
     spriteBone: []
     spriteOutline: []
@@ -143,15 +143,15 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Sink_Frame_1
     originalName: 
-    pivot: {x: 0.61538464, y: -1}
+    pivot: {x: 0.5, y: -0.923077}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 24
-      width: 13
-      height: 12
+      y: 25
+      width: 12
+      height: 13
     spriteID: 57b6a421a2b95f64cbe550e8161bedfc
     spriteBone: []
     spriteOutline: []
@@ -160,7 +160,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 24}
+    uvTransform: {x: 4, y: 25}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -173,18 +173,18 @@ ScriptedImporter:
     - name: Sink_Frame_0
       frameIndex: 0
       cellRect:
-        x: 0
+        x: 2
         y: 12
-        width: 13
-        height: 12
+        width: 12
+        height: 13
       spriteId: 97f4d0092faf5ce4196e3920a8d9c66d
     - name: Sink_Frame_1
       frameIndex: 1
       cellRect:
-        x: 0
+        x: 2
         y: 12
-        width: 13
-        height: 12
+        width: 12
+        height: 13
       spriteId: 57b6a421a2b95f64cbe550e8161bedfc
     linkedCells: []
     parentIndex: -1
@@ -192,4 +192,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 16, y: 32}
+  canvasSize: {x: 16, y: 36}

@@ -8,6 +8,7 @@ public class PlayerIceState : PlayerBaseState
     {
         player.ResetArrowHighlight();
         player.DisableKeyPrompt();
+        player.EnableArrow("Down", "Return");
         player.EnableArrow("Left", "Small Cup");
         player.EnableArrow("Right", "Big Cup");
     }
@@ -26,15 +27,12 @@ public class PlayerIceState : PlayerBaseState
                 case "Up":
                     break;
                 case "Down":
+                    player.SwitchState(player.movementState);
                     break;
                 case "Left":
                     if (player.currentItem == "Ice")
                     {
                         player.ChangeCurrentItem("Shaved Ice Big");
-                    }
-                    else
-                    {
-                        player.ChangeCurrentItem("Trash");
                     }
                     player.SwitchState(player.movementState);
                     break;
@@ -42,10 +40,6 @@ public class PlayerIceState : PlayerBaseState
                     if (player.currentItem == "Ice")
                     {
                         player.ChangeCurrentItem("Shaved Ice Small");
-                    }
-                    else
-                    {
-                        player.ChangeCurrentItem("Trash");
                     }
                     player.SwitchState(player.movementState);
                     break;

@@ -52,7 +52,7 @@ public class CustomerQueue : MonoBehaviour
                     firstCustomer = false;
                     eventBroadcast.StoreOpenNoti();
                 }
-                lastSpawnTime = Time.time + 2.5f + 7.5f * (1 - dayLogic.hypeMeter);
+                lastSpawnTime = Time.time + 1.5f + 1.5f * (1 - dayLogic.hypeMeter);
                 SpawnCustomer(customerPool[poolPointer]);
                 poolPointer++;
                 if (poolPointer >= customerPool.Length)
@@ -75,6 +75,7 @@ public class CustomerQueue : MonoBehaviour
 
     private void SpawnCustomer(Customer customer)
     {
+        customer.gameObject.transform.position = exitPos.transform.position;
         customer.gameObject.SetActive(true);
         for (int i = 0; i < queuePos.Length; i++)
         {

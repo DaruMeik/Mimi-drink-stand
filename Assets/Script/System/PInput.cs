@@ -64,42 +64,6 @@ public partial class @PInput: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""UpChoice"",
-                    ""type"": ""Button"",
-                    ""id"": ""2c58dfe8-a283-4331-890a-35fd3d459b20"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""DownChoice"",
-                    ""type"": ""Button"",
-                    ""id"": ""2f0b252b-c6a0-4ed5-9281-c09956013e4f"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""LeftChoice"",
-                    ""type"": ""Button"",
-                    ""id"": ""ccf662c9-be52-4493-bab9-d541140059b0"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""RightChoice"",
-                    ""type"": ""Button"",
-                    ""id"": ""9462b57d-670f-454d-af6b-a22750a8971d"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Interact"",
                     ""type"": ""Button"",
                     ""id"": ""807ec102-abf6-4d53-a56c-02e77f4e076c"",
@@ -159,8 +123,19 @@ public partial class @PInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""8d0dd4aa-beff-4369-8c34-7fab5361ec4b"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Up"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""b860421d-7d1c-44fd-a200-73eb5d04d724"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""path"": ""<Keyboard>/k"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -182,7 +157,7 @@ public partial class @PInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""0305f2a8-9c56-4423-9ea9-98ef465ace5e"",
-                    ""path"": ""<Keyboard>/q"",
+                    ""path"": ""<Keyboard>/j"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -193,7 +168,7 @@ public partial class @PInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""006280e3-7d75-43d3-8602-8545ee038ecc"",
-                    ""path"": ""<Keyboard>/backspace"",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -236,52 +211,19 @@ public partial class @PInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""fcba971b-144e-4b30-8bfd-c3f30571e77e"",
-                    ""path"": ""<Keyboard>/i"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""UpChoice"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""8ff81a5e-a52d-4370-8863-b6fd57dab15f"",
-                    ""path"": ""<Keyboard>/k"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""DownChoice"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""b10149c4-5419-43b9-a5c1-f9cd24d16a55"",
-                    ""path"": ""<Keyboard>/j"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""LeftChoice"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""c3ff5d0a-af60-4a0a-a0f0-79a9021b95fe"",
-                    ""path"": ""<Keyboard>/l"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""RightChoice"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""cd89f026-efa0-4011-8c0f-da993de3c0ee"",
                     ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Down"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7ca2a2ea-494d-47bd-9efc-580029a9dd82"",
+                    ""path"": ""<Gamepad>/dpad/down"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -302,8 +244,30 @@ public partial class @PInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""2cd98184-5c94-4da0-86d5-9c4bf5a91b08"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Left"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""5b04ef37-2d51-4e78-ba82-60cd9682af90"",
                     ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Right"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""841021e8-0503-40f3-98ca-94928f55a661"",
+                    ""path"": ""<Gamepad>/leftStick/right"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -838,10 +802,6 @@ public partial class @PInput: IInputActionCollection2, IDisposable
         m_Player_Down = m_Player.FindAction("Down", throwIfNotFound: true);
         m_Player_Left = m_Player.FindAction("Left", throwIfNotFound: true);
         m_Player_Right = m_Player.FindAction("Right", throwIfNotFound: true);
-        m_Player_UpChoice = m_Player.FindAction("UpChoice", throwIfNotFound: true);
-        m_Player_DownChoice = m_Player.FindAction("DownChoice", throwIfNotFound: true);
-        m_Player_LeftChoice = m_Player.FindAction("LeftChoice", throwIfNotFound: true);
-        m_Player_RightChoice = m_Player.FindAction("RightChoice", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_Cancel = m_Player.FindAction("Cancel", throwIfNotFound: true);
         m_Player_Help = m_Player.FindAction("Help", throwIfNotFound: true);
@@ -924,10 +884,6 @@ public partial class @PInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Down;
     private readonly InputAction m_Player_Left;
     private readonly InputAction m_Player_Right;
-    private readonly InputAction m_Player_UpChoice;
-    private readonly InputAction m_Player_DownChoice;
-    private readonly InputAction m_Player_LeftChoice;
-    private readonly InputAction m_Player_RightChoice;
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_Cancel;
     private readonly InputAction m_Player_Help;
@@ -941,10 +897,6 @@ public partial class @PInput: IInputActionCollection2, IDisposable
         public InputAction @Down => m_Wrapper.m_Player_Down;
         public InputAction @Left => m_Wrapper.m_Player_Left;
         public InputAction @Right => m_Wrapper.m_Player_Right;
-        public InputAction @UpChoice => m_Wrapper.m_Player_UpChoice;
-        public InputAction @DownChoice => m_Wrapper.m_Player_DownChoice;
-        public InputAction @LeftChoice => m_Wrapper.m_Player_LeftChoice;
-        public InputAction @RightChoice => m_Wrapper.m_Player_RightChoice;
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputAction @Cancel => m_Wrapper.m_Player_Cancel;
         public InputAction @Help => m_Wrapper.m_Player_Help;
@@ -971,18 +923,6 @@ public partial class @PInput: IInputActionCollection2, IDisposable
             @Right.started += instance.OnRight;
             @Right.performed += instance.OnRight;
             @Right.canceled += instance.OnRight;
-            @UpChoice.started += instance.OnUpChoice;
-            @UpChoice.performed += instance.OnUpChoice;
-            @UpChoice.canceled += instance.OnUpChoice;
-            @DownChoice.started += instance.OnDownChoice;
-            @DownChoice.performed += instance.OnDownChoice;
-            @DownChoice.canceled += instance.OnDownChoice;
-            @LeftChoice.started += instance.OnLeftChoice;
-            @LeftChoice.performed += instance.OnLeftChoice;
-            @LeftChoice.canceled += instance.OnLeftChoice;
-            @RightChoice.started += instance.OnRightChoice;
-            @RightChoice.performed += instance.OnRightChoice;
-            @RightChoice.canceled += instance.OnRightChoice;
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
@@ -1014,18 +954,6 @@ public partial class @PInput: IInputActionCollection2, IDisposable
             @Right.started -= instance.OnRight;
             @Right.performed -= instance.OnRight;
             @Right.canceled -= instance.OnRight;
-            @UpChoice.started -= instance.OnUpChoice;
-            @UpChoice.performed -= instance.OnUpChoice;
-            @UpChoice.canceled -= instance.OnUpChoice;
-            @DownChoice.started -= instance.OnDownChoice;
-            @DownChoice.performed -= instance.OnDownChoice;
-            @DownChoice.canceled -= instance.OnDownChoice;
-            @LeftChoice.started -= instance.OnLeftChoice;
-            @LeftChoice.performed -= instance.OnLeftChoice;
-            @LeftChoice.canceled -= instance.OnLeftChoice;
-            @RightChoice.started -= instance.OnRightChoice;
-            @RightChoice.performed -= instance.OnRightChoice;
-            @RightChoice.canceled -= instance.OnRightChoice;
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
@@ -1182,10 +1110,6 @@ public partial class @PInput: IInputActionCollection2, IDisposable
         void OnDown(InputAction.CallbackContext context);
         void OnLeft(InputAction.CallbackContext context);
         void OnRight(InputAction.CallbackContext context);
-        void OnUpChoice(InputAction.CallbackContext context);
-        void OnDownChoice(InputAction.CallbackContext context);
-        void OnLeftChoice(InputAction.CallbackContext context);
-        void OnRightChoice(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnCancel(InputAction.CallbackContext context);
         void OnHelp(InputAction.CallbackContext context);

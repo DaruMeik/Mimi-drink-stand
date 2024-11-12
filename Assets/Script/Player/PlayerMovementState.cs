@@ -14,19 +14,21 @@ public class PlayerMovementState : PlayerBaseState
     {
         if (player.systemSetting.PressHelp())
         {
-            player.EnableRecipes();
             player.SwitchState(player.pauseState);
+            player.EnableRecipes();
             return;
         }
         if (player.systemSetting.PressEscape())
         {
-            player.EnablePauseMenu();
             player.SwitchState(player.pauseState);
+            player.EnablePauseMenu();
             return;
         }
         switch (player.currentInput)
         {
             case "Up":
+                if (!player.systemSetting.firstRecipe)
+                    break;
                 if (highlightObjU != null)
                 {
                     player.ChangeArrowPos("Up");
@@ -34,6 +36,8 @@ public class PlayerMovementState : PlayerBaseState
                 }
                 break;
             case "Down":
+                if (!player.systemSetting.firstRecipe)
+                    break;
                 if (highlightObjD != null)
                 {
                     player.ChangeArrowPos("Down");

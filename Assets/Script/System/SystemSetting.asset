@@ -12,9 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634081950ec3faf43a6c928f7e9ef0a8, type: 3}
   m_Name: SystemSetting
   m_EditorClassIdentifier: 
-  currentRound: 3
-  totalMoney: 0
-  highestScore: 0
+  currentRound: 0
+  highestScores: ac2600000000000000000000
   eventBroadcast: {fileID: 11400000, guid: 204fade9e66f1594cba0b9dc8b679654, type: 2}
+  firstRecipe: 1
+  finishFirstDay: 1
   finishBaseGame: 0
-  volume: 1
+  masterVolume: 0.4455851
+  bgmVolume: 0.7875
+  sfxVolume: 0.65000015
+  display: 0
+  saveFilePath: C:/Users/namng/AppData/LocalLow/DaruMeik/MimiDrinkStand/PlayerData.json

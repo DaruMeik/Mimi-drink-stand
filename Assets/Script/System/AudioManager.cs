@@ -16,6 +16,6 @@ public class AudioManager : MonoBehaviour
     }
     private void ChangeVolume()
     {
-        audioSource.volume = systemSetting.volume;
+        audioSource.volume = systemSetting.masterVolume * systemSetting.bgmVolume;
     }
 }

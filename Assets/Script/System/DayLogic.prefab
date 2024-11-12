@@ -49,6 +49,7 @@ MonoBehaviour:
   - Iced Coffee
   maxTime: 90
   minHype: 0
+  hypeDepleteSpeed: 20
   dayTutorial: {fileID: 0}
   systemSetting: {fileID: 11400000, guid: abeb3f85073a128498e8214975bf9082, type: 2}
   itemLibrary: {fileID: 11400000, guid: b494ee815718aa345af8b0bafcac6987, type: 2}

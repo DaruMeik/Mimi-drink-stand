@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private PlayerBaseState currentState;
+    public PlayerBaseState currentState { private set; get; }
     public PlayerPauseState pauseState = new PlayerPauseState();
     public PlayerEndState endState = new PlayerEndState();
     public PlayerMovementState movementState = new PlayerMovementState();
@@ -64,7 +64,7 @@ public class Player : MonoBehaviour
         eventBroadcast.noMoreCustomer -= ResultScreen;
         eventBroadcast.gameOver -= GameOverScreen;
     }
-    private void Start()
+    private void Awake()
     {
         currentInput = "";
         currentCustomers.Clear();
@@ -84,8 +84,6 @@ public class Player : MonoBehaviour
             currentInput = "Left";
         if (systemSetting.PressRight())
             currentInput = "Right";
-        if(currentInput!="")
-            Debug.Log(currentInput);
         if (systemSetting.PressCheat())
             systemSetting.finishBaseGame = true;
         currentState.UpdateState(this);

@@ -6,30 +6,39 @@ using UnityEngine.SceneManagement;
 
 public class TitleScreen : MonoBehaviour
 {
+    [SerializeField] private GameObject levelSel;
+    [SerializeField] private GameObject buttonPrompt;
     [SerializeField] private SystemSetting systemSetting;
-    [SerializeField] private Button continueButton;
+    [SerializeField] private Button newGameButton;
     [SerializeField] private Button extraButton;
+    [SerializeField] private Button settingButton;
+    [SerializeField] private Button quitButton;
     [SerializeField] private GameObject settingPage;
     public void OnEnable()
     {
-        if (systemSetting.currentRound == 0)
-            continueButton.interactable = false;
-        else
-            continueButton.interactable = true;
-        if(!systemSetting.finishBaseGame)
-            extraButton.interactable = false;
-        else
-            extraButton.interactable = true;
+        Navigation newGameNav = new Navigation(), quitNav = new Navigation();
+        newGameNav.mode = Navigation.Mode.Explicit;
+        quitNav.mode = Navigation.Mode.Explicit;
 
+        newGameNav.selectOnDown = settingButton;
+        quitNav.selectOnLeft = settingButton;
+
+        if (!systemSetting.finishBaseGame)
+        {
+            extraButton.interactable = false;
+        }
+        else
+        {
+            extraButton.interactable = true;
+            newGameNav.selectOnRight = extraButton;
+            quitNav.selectOnUp = extraButton;
+        }
+        newGameButton.navigation = newGameNav;
+        quitButton.navigation = quitNav;
     }
     public void NewGame()
     {
-        systemSetting.NewGame();
-        Continue();
-    }
-    public void Continue()
-    {
-        SceneManager.LoadScene("Day" + systemSetting.currentRound);
+        levelSel.SetActive(true);
     }
     public void Extra()
     {
@@ -41,6 +50,7 @@ public class TitleScreen : MonoBehaviour
     }
     public void QuitGame()
     {
+        Debug.Log("Quitting!");
         Application.Quit();
     }
 }

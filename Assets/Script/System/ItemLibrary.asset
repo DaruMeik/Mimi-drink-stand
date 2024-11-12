@@ -72,16 +72,16 @@ MonoBehaviour:
     price: 4
   - itemName: Iced Soda
     sprite: {fileID: -800726337, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
-    price: 2
+    price: 3
   - itemName: Blueberry Soda
     sprite: {fileID: 758463787, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
-    price: 4
+    price: 5
   - itemName: Kiwi Soda
     sprite: {fileID: 929717047, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
-    price: 4
+    price: 5
   - itemName: Strawberry Soda
     sprite: {fileID: -835867694, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
-    price: 4
+    price: 5
   - itemName: Small Cup
     sprite: {fileID: 978127659, guid: abbb856a6cc8c6840bf71adbd065e0d4, type: 3}
     price: 0

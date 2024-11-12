@@ -17,8 +17,10 @@ public class EventBroadcast : ScriptableObject
     public event VoidEvent gameOver;
     public event VoidEvent turnOffUI;
     public event VoidEvent turnOffPauseMenu;
+    public event VoidEvent returnable;
 
     public event VoidEvent changeVolume;
+    public event VoidEvent changeInput;
 
     public delegate void CustomerEvent(Customer c);
     public event CustomerEvent createOrder;
@@ -89,6 +91,16 @@ public class EventBroadcast : ScriptableObject
     {
         if(changeVolume != null)
             changeVolume.Invoke();
+    }
+    public void ChangeInputNoti()
+    {
+        if(changeInput != null)
+            changeInput.Invoke();
+    }
+    public void ReturnableNoti()
+    {
+        if(returnable != null)
+            returnable.Invoke();
     }
     public void CreateOrderNoti(Customer c)
     {

@@ -38,10 +38,7 @@ public class Customer : MonoBehaviour
         if (dayLogic != null)
         {
             string s = dayLogic.orderList[UnityEngine.Random.Range(0, dayLogic.orderList.Length)];
-            order = Array.Find(itemLibrary.itemLibrary, x => x.itemName == s);
-            Debug.Assert(order != null);
-            thoughtItem.ChangeSprite(order.itemName);
-            thoughtItem.gameObject.SetActive(true);
+            DecideOrder(Array.Find(itemLibrary.itemLibrary, x => x.itemName == s));
             eventBroadcast.CreateOrderNoti(this);
         }
 
@@ -78,15 +75,23 @@ public class Customer : MonoBehaviour
         //    }
         //    hpBarFillTransform.localScale = new Vector3(satisfaction, 1f, 1f);
         //}
-        if (Vector3.Distance(transform.position, target.position) > 0.2)
+        if (transform.position.y > target.position.y)
         {
-            //startWaitTime += Time.deltaTime;
-            transform.position += (target.position - transform.position).normalized * speed * Time.deltaTime;
+            transform.position += Vector3.down * speed * Time.deltaTime;
         }
-        else if (transform.position != target.position)
+        else
         {
-            transform.position = target.position;
-            //startWaitTime = Mathf.Min(Time.time, startWaitTime + 2f);
+            transform.position = new Vector3(transform.position.x, target.position.y, transform.position.z);
+            if (Vector3.Distance(transform.position, target.position) > 0.2)
+            {
+                //startWaitTime += Time.deltaTime;
+                transform.position += (target.position - transform.position).normalized * speed * Time.deltaTime;
+            }
+            else if (transform.position != target.position)
+            {
+                transform.position = target.position;
+                //startWaitTime = Mathf.Min(Time.time, startWaitTime + 2f);
+            }
         }
     }
     public void ChangeTarget(int t)
@@ -134,5 +139,12 @@ public class Customer : MonoBehaviour
             eventBroadcast.LeavevQueueNoti(currentPos);
             gameObject.SetActive(false);
         }
+    }
+    public void DecideOrder(Item order)
+    {
+        this.order = order;
+        Debug.Assert(order != null);
+        thoughtItem.ChangeSprite(order.itemName);
+        thoughtItem.gameObject.SetActive(true);
     }
 }

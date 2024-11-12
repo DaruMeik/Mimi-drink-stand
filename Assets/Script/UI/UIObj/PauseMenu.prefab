@@ -93,6 +93,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settingPage: {fileID: 0}
+  firstSelectedObj: {fileID: 3146312554128456465}
+  eventSystem: {fileID: 0}
   eventBroadcast: {fileID: 11400000, guid: 204fade9e66f1594cba0b9dc8b679654, type: 2}
 --- !u!1 &3146312554128456465
 GameObject:

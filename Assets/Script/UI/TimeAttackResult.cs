@@ -9,15 +9,13 @@ public class TimeAttackResult : DayEndResult
 {
     public override void UpdateEndScreen()
     {
-        if(dayLogic.currentMoney > systemSetting.highestScore)
-            systemSetting.highestScore = dayLogic.currentMoney;
 
         textMesh.text = "";
         textMesh.text += "<align=center>-- Time attack result --</align>\n";
         textMesh.text += "- Today earning: " + dayLogic.currentMoney + "\n";
         textMesh.text += "- Failed order: " + (3 - dayLogic.HP) + "\n";
         textMesh.text += "-------------------------\n";
-        textMesh.text += "- Highest earning: " + systemSetting.highestScore + "\n\n";
+        textMesh.text += "- Highest earning: " + systemSetting.highestScores[0] + "\n\n";
     }
     public void ToTitle()
     {

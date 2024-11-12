@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 0d369742ef2f1384994c16b7505659d2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - textMesh: {instanceID: 0}
+  - spriteAsset_MnK: {fileID: 11400000, guid: c4e146d3c2181334db3ffbb76b8084ed, type: 2}
+  - spriteAsset_Controller: {fileID: 11400000, guid: e9b346cb8b168bb4dafd6d05cbbf25f2, type: 2}
+  - systemSetting: {fileID: 11400000, guid: abeb3f85073a128498e8214975bf9082, type: 2}
+  - eventBroadcast: {fileID: 11400000, guid: 204fade9e66f1594cba0b9dc8b679654, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

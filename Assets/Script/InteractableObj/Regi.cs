@@ -33,14 +33,14 @@ public class Regi : InteractableObj
             {
                 Item i = Array.Find(itemLibrary.itemLibrary, x => x.itemName == player.currentItem);
                 Debug.Assert(i != null);
-                dayLogic.AdjustMoney(i.price);
-                dayLogic.AdjustHypeMeter(+0.1f);
+                dayLogic.AdjustMoney(Mathf.FloorToInt(i.price*100f*dayLogic.hypeMultiplier));
+                dayLogic.AdjustHypeMeter(0.15f*i.price);
                 success.Play();
             }
             else
             {
                 dayLogic.AdjustHP(-1);
-                dayLogic.AdjustHypeMeter(-0.4f);
+                dayLogic.AdjustHypeMeter(-0.5f);
                 fail.Play();
             }
             customer.LeaveTheShop();
@@ -49,7 +49,7 @@ public class Regi : InteractableObj
     }
     private void ChangeVolume()
     {
-        success.volume = systemSetting.volume;
-        fail.volume = systemSetting.volume;
+        success.volume = systemSetting.masterVolume * systemSetting.sfxVolume;
+        fail.volume = systemSetting.masterVolume * systemSetting.sfxVolume;
     }
 }

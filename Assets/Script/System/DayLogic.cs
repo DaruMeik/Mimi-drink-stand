@@ -5,6 +5,8 @@ public class DayLogic : MonoBehaviour
     public string[] orderList;
     public int maxTime = 90;
     public float minHype = 0f;
+    public float hypeDepleteSpeed = 5f;
+    public float hypeMultiplier { get; private set; }
     public int currentMoney { get; private set; }
     public float startTime { get; private set; }
     public float hypeMeter { get; private set; }
@@ -19,7 +21,7 @@ public class DayLogic : MonoBehaviour
     {
         Debug.Assert(orderList.Length > 0);
         hypeMeter = 0;
-        AdjustHypeMeter(0.2f + 0.075f * systemSetting.currentRound);
+        hypeMultiplier = 1;
         HP = 3;
         AdjustHP(0);
         dayHasStart = false;
@@ -41,6 +43,8 @@ public class DayLogic : MonoBehaviour
         {
             eventBroadcast.StoreCloseNoti();
         }
+        hypeMeter = Mathf.Max(0, hypeMeter - Time.deltaTime * 0.001f * hypeDepleteSpeed * Mathf.CeilToInt(hypeMeter));
+        hypeMultiplier = 1f + Mathf.FloorToInt(hypeMeter) * 0.25f;
     }
     public void AdjustMoney(int amount)
     {
@@ -49,13 +53,14 @@ public class DayLogic : MonoBehaviour
     }
     public void AdjustHypeMeter(float f)
     {
-        hypeMeter = Mathf.Clamp(hypeMeter + f, minHype, 1);
+        hypeMeter = Mathf.Clamp(hypeMeter + f, 0f, 4.999f);
+        hypeMultiplier = 1f + Mathf.FloorToInt(hypeMeter) * 0.25f;
     }
     public void AdjustHP(int amount)
     {
-        HP+= amount;
+        HP += amount;
         eventBroadcast.ChangeToHPNoti();
-        if (HP < 0)
+        if (HP <= 0)
         {
             eventBroadcast.GameOverNoti();
         }

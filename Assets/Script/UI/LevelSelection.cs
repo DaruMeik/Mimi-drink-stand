@@ -44,9 +44,9 @@ public class LevelSelection : MonoBehaviour
             TurnLeft();
         else if (systemSetting.PressRight())
             TurnRight();
-        else if (systemSetting.PressCancel())
+        else if (systemSetting.PressEast())
             Return();
-        else if (systemSetting.PressConfirm())
+        else if (systemSetting.PressSouth())
             SelectStage();
     }
     private void TurnLeft()

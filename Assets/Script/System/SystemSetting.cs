@@ -121,10 +121,12 @@ public class SystemSetting : ScriptableObject
     public bool PressDown() => playerInput.Player.Down.WasPressedThisFrame();
     public bool PressLeft() => playerInput.Player.Left.WasPressedThisFrame();
     public bool PressRight() => playerInput.Player.Right.WasPressedThisFrame();
-    public bool PressConfirm() => playerInput.Player.Confirm.WasPressedThisFrame();
-    public bool PressCancel() => playerInput.Player.Cancel.WasPressedThisFrame();
-    public bool PressHelp() => playerInput.Player.Help.WasPressedThisFrame();
-    public bool PressEscape() => playerInput.Player.Escape.WasPressedThisFrame();
+    public bool PressNorth() =>  playerInput.Player.North.WasPressedThisFrame();
+    public bool PressSouth() => playerInput.Player.South.WasPressedThisFrame();
+    public bool PressWest() => playerInput.Player.West.WasPressedThisFrame();
+    public bool PressEast() => playerInput.Player.East.WasPressedThisFrame();
+    public bool PressStart() => playerInput.Player.Start.WasPressedThisFrame();
+    public bool PressBack() => playerInput.Player.Back.WasPressedThisFrame();
     public bool PressCheat() => playerInput.Player.Cheat.WasPressedThisFrame();
 
     public Vector2 GetPointerPos() => playerInput.Player.Point.ReadValue<Vector2>();

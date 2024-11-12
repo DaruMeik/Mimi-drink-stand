@@ -28,7 +28,7 @@ public class SettingPage : MonoBehaviour
     {
         if(eventSystem.currentSelectedGameObject == inputDisplay)
         {
-            if(systemSetting.PressLeft() || systemSetting.PressRight() || systemSetting.PressConfirm())
+            if(systemSetting.PressLeft() || systemSetting.PressRight() || systemSetting.PressSouth())
             {
                 ChangeInput();
             }

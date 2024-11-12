@@ -13,7 +13,8 @@ public class Player : MonoBehaviour
     public PlayerCupState cupState = new PlayerCupState();
     public PlayerCoffeeState coffeeState = new PlayerCoffeeState();
 
-    public string currentInput { get; private set; }
+    public string currentDirInput { get; private set; }
+    public string currentMovInput { get; private set; }
     public string currentItem { get; private set; }
     //public Customer currentCustomer { get; private set; }
     public Queue<Customer> currentCustomers = new Queue<Customer> { };
@@ -66,7 +67,7 @@ public class Player : MonoBehaviour
     }
     private void Awake()
     {
-        currentInput = "";
+        currentDirInput = "";
         currentCustomers.Clear();
         DisableRecipes();
         ChangeCurrentItem("");
@@ -75,15 +76,26 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        currentInput = "";
+        currentMovInput = "";
         if (systemSetting.PressUp())
-            currentInput = "Up";
+            currentMovInput = "Up";
         if (systemSetting.PressDown())
-            currentInput = "Down";
+            currentMovInput = "Down";
         if (systemSetting.PressLeft())
-            currentInput = "Left";
+            currentMovInput = "Left";
         if (systemSetting.PressRight())
-            currentInput = "Right";
+            currentMovInput = "Right";
+
+        currentDirInput = "";
+        if (systemSetting.PressNorth())
+            currentDirInput = "Up";
+        if (systemSetting.PressSouth())
+            currentDirInput = "Down";
+        if (systemSetting.PressWest())
+            currentDirInput = "Left";
+        if (systemSetting.PressEast())
+            currentDirInput = "Right";
+
         if (systemSetting.PressCheat())
             systemSetting.finishBaseGame = true;
         currentState.UpdateState(this);

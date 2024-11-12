@@ -26,9 +26,9 @@ public class DayEndResult : MonoBehaviour
     }
     private void Update()
     {
-        if (systemSetting.PressCancel() && daySuccess)
+        if (systemSetting.PressEast() && daySuccess)
             Retry();
-        else if (systemSetting.PressConfirm())
+        else if (systemSetting.PressSouth())
             NextLevel();
     }
     public virtual void UpdateEndScreen()

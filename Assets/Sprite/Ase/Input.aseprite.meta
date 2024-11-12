@@ -123,7 +123,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Input
     originalName: 
-    pivot: {x: 0.5, y: 0.5084746}
+    pivot: {x: 0.5, y: -0.02666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -131,7 +131,7 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 60
-      height: 59
+      height: 75
     spriteID: 33c69c5d08932cc4a9af5226dfa3f158
     spriteBone: []
     spriteOutline: []
@@ -141,26 +141,6 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: Input_Frame_1
-    originalName: 
-    pivot: {x: 0.5, y: 0.5084746}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 71
-      width: 60
-      height: 59
-    spriteID: ffce5c85cf700b141ba28acba415a4bd
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 71}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -170,26 +150,18 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Input_Frame_0
+    - name: Input
       frameIndex: 0
       cellRect:
         x: 2
-        y: -30
+        y: 2
         width: 60
-        height: 59
+        height: 75
       spriteId: 33c69c5d08932cc4a9af5226dfa3f158
-    - name: Input_Frame_1
-      frameIndex: 1
-      cellRect:
-        x: 2
-        y: -30
-        width: 60
-        height: 59
-      spriteId: ffce5c85cf700b141ba28acba415a4bd
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 64, y: 32}
+  canvasSize: {x: 64, y: 80}

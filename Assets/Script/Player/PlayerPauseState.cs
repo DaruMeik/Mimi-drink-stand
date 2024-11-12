@@ -14,7 +14,7 @@ public class PlayerPauseState : PlayerBaseState
     }
     public override void UpdateState(Player player)
     {
-        switch (player.currentInput)
+        switch (player.currentMovInput)
         {
             case "Left":
                 player.eventBroadcast.TurnLeftNoti();
@@ -25,7 +25,7 @@ public class PlayerPauseState : PlayerBaseState
         }
         if (returnable)
         {
-            if (player.systemSetting.PressCancel() || player.systemSetting.PressConfirm())
+            if (player.systemSetting.PressSouth() || player.systemSetting.PressEast())
             {
                 Return();
             }

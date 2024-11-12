@@ -64,16 +64,16 @@ public partial class @PInput: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Confirm"",
+                    ""name"": ""North"",
                     ""type"": ""Button"",
-                    ""id"": ""807ec102-abf6-4d53-a56c-02e77f4e076c"",
+                    ""id"": ""dbb84c89-1ac5-4701-adb2-77865b48ce6f"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Cancel"",
+                    ""name"": ""South"",
                     ""type"": ""Button"",
                     ""id"": ""ba9ee1ef-24a5-49de-a991-48390f98e356"",
                     ""expectedControlType"": ""Button"",
@@ -82,7 +82,7 @@ public partial class @PInput: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Help"",
+                    ""name"": ""West"",
                     ""type"": ""Button"",
                     ""id"": ""2e1f7420-2ae9-43bb-9a85-7ce7d638fa4f"",
                     ""expectedControlType"": ""Button"",
@@ -91,9 +91,27 @@ public partial class @PInput: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Escape"",
+                    ""name"": ""East"",
                     ""type"": ""Button"",
-                    ""id"": ""dbb84c89-1ac5-4701-adb2-77865b48ce6f"",
+                    ""id"": ""807ec102-abf6-4d53-a56c-02e77f4e076c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Back"",
+                    ""type"": ""Button"",
+                    ""id"": ""673ac642-80d6-4af1-b58a-6f705f41576a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Start"",
+                    ""type"": ""Button"",
+                    ""id"": ""3e1544ff-d6b4-463e-b7ae-7b852d2342a2"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -167,7 +185,7 @@ public partial class @PInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""c181b1c1-dd49-4820-b192-575b622a5e17"",
-                    ""path"": ""<Keyboard>/w"",
+                    ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -188,100 +206,23 @@ public partial class @PInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""2dd84535-62fb-44ca-99f9-6abd9800f81f"",
-                    ""path"": ""<SwitchProControllerHID>/buttonEast"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Confirm"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""dd1b22a3-424e-4157-904d-c173b6f0fa46"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Confirm"",
+                    ""action"": ""East"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""799e366b-7861-4291-ac84-0fa8a272a718"",
-                    ""path"": ""<XInputController>/buttonEast"",
+                    ""id"": ""2dd84535-62fb-44ca-99f9-6abd9800f81f"",
+                    ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Confirm"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""531a4312-0f91-4a4d-94ce-29f94ce3a389"",
-                    ""path"": ""<Keyboard>/h"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Help"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""46e98017-93f1-4821-a76c-e1dd3ff8c5a5"",
-                    ""path"": ""<SwitchProControllerHID>/buttonNorth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Help"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""2326d302-ed0d-4299-808c-8b4d7a5b9e6d"",
-                    ""path"": ""<XInputController>/buttonNorth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Help"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""657adea7-667e-4c46-8507-8bc2759b7d30"",
-                    ""path"": ""<Keyboard>/escape"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Escape"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""84eb6469-d5d2-4dd5-9f06-20d7b6c8a035"",
-                    ""path"": ""<SwitchProControllerHID>/buttonWest"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Escape"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""b359efc1-7096-4b9d-8ad5-fcd3c9947dcf"",
-                    ""path"": ""<XInputController>/buttonWest"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Escape"",
+                    ""action"": ""East"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -299,7 +240,7 @@ public partial class @PInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""cd89f026-efa0-4011-8c0f-da993de3c0ee"",
-                    ""path"": ""<Keyboard>/s"",
+                    ""path"": ""<Keyboard>/downArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -321,7 +262,7 @@ public partial class @PInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""4a7f0521-7a72-4b2c-a5db-28c170351fdc"",
-                    ""path"": ""<Keyboard>/a"",
+                    ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -343,7 +284,7 @@ public partial class @PInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""5b04ef37-2d51-4e78-ba82-60cd9682af90"",
-                    ""path"": ""<Keyboard>/d"",
+                    ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -386,30 +327,8 @@ public partial class @PInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""a3ecc7ff-e7c9-4ca7-8554-30ebead06a6b"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Navigate"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""up"",
                     ""id"": ""72043f6e-43c8-4238-a942-c467e6987d24"",
                     ""path"": ""<Keyboard>/upArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Navigate"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""10bed20e-24f6-4293-bc3d-b65fb189f3d8"",
-                    ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -430,30 +349,8 @@ public partial class @PInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""51b94f90-2323-4832-9845-de6a47b28f21"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Navigate"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
                     ""id"": ""4263109a-2c51-486d-bbc4-4dac9ecc9e67"",
                     ""path"": ""<Keyboard>/leftArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Navigate"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""fd5abb69-7c5f-42be-9742-14ba6c6e7451"",
-                    ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -529,45 +426,111 @@ public partial class @PInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""2a72c4a6-4cd9-429a-9c14-536412a404f0"",
-                    ""path"": ""<SwitchProControllerHID>/buttonSouth"",
+                    ""id"": ""56746b82-839e-4211-994c-df14510cea62"",
+                    ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Cancel"",
+                    ""action"": ""Back"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""19717e18-fb2e-4a33-aacc-590cf7287240"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""id"": ""7a73a924-7744-4523-8249-ca1d6425f482"",
+                    ""path"": ""<Gamepad>/{Back}"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Cancel"",
+                    ""action"": ""Back"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2fb1419f-fa03-400f-9669-6af803115c8d"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Start"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""52025c9a-cc5f-4c1e-9c7a-5c6fb98052ab"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Start"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1b1c4181-5e1b-4f39-8404-61eb1d74a8a8"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""North"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e02d2556-df23-4b7d-87bf-321f1fc449c4"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""North"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""82272ebc-6ea3-4005-a2c8-0f325c4d6e60"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""West"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9d8203ce-f25f-4160-914f-558b074bbfd0"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""West"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
                     ""id"": ""98686b63-39b8-4b59-b75b-03ee402183bf"",
-                    ""path"": ""<Keyboard>/q"",
+                    ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Cancel"",
+                    ""action"": ""South"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
                     ""id"": ""9f17f2dc-2728-47b1-92f4-26bd7b523d62"",
-                    ""path"": ""<XInputController>/buttonSouth"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Cancel"",
+                    ""action"": ""South"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -582,10 +545,12 @@ public partial class @PInput: IInputActionCollection2, IDisposable
         m_Player_Down = m_Player.FindAction("Down", throwIfNotFound: true);
         m_Player_Left = m_Player.FindAction("Left", throwIfNotFound: true);
         m_Player_Right = m_Player.FindAction("Right", throwIfNotFound: true);
-        m_Player_Confirm = m_Player.FindAction("Confirm", throwIfNotFound: true);
-        m_Player_Cancel = m_Player.FindAction("Cancel", throwIfNotFound: true);
-        m_Player_Help = m_Player.FindAction("Help", throwIfNotFound: true);
-        m_Player_Escape = m_Player.FindAction("Escape", throwIfNotFound: true);
+        m_Player_North = m_Player.FindAction("North", throwIfNotFound: true);
+        m_Player_South = m_Player.FindAction("South", throwIfNotFound: true);
+        m_Player_West = m_Player.FindAction("West", throwIfNotFound: true);
+        m_Player_East = m_Player.FindAction("East", throwIfNotFound: true);
+        m_Player_Back = m_Player.FindAction("Back", throwIfNotFound: true);
+        m_Player_Start = m_Player.FindAction("Start", throwIfNotFound: true);
         m_Player_Cheat = m_Player.FindAction("Cheat", throwIfNotFound: true);
         m_Player_Navigate = m_Player.FindAction("Navigate", throwIfNotFound: true);
         m_Player_Point = m_Player.FindAction("Point", throwIfNotFound: true);
@@ -658,10 +623,12 @@ public partial class @PInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Down;
     private readonly InputAction m_Player_Left;
     private readonly InputAction m_Player_Right;
-    private readonly InputAction m_Player_Confirm;
-    private readonly InputAction m_Player_Cancel;
-    private readonly InputAction m_Player_Help;
-    private readonly InputAction m_Player_Escape;
+    private readonly InputAction m_Player_North;
+    private readonly InputAction m_Player_South;
+    private readonly InputAction m_Player_West;
+    private readonly InputAction m_Player_East;
+    private readonly InputAction m_Player_Back;
+    private readonly InputAction m_Player_Start;
     private readonly InputAction m_Player_Cheat;
     private readonly InputAction m_Player_Navigate;
     private readonly InputAction m_Player_Point;
@@ -677,10 +644,12 @@ public partial class @PInput: IInputActionCollection2, IDisposable
         public InputAction @Down => m_Wrapper.m_Player_Down;
         public InputAction @Left => m_Wrapper.m_Player_Left;
         public InputAction @Right => m_Wrapper.m_Player_Right;
-        public InputAction @Confirm => m_Wrapper.m_Player_Confirm;
-        public InputAction @Cancel => m_Wrapper.m_Player_Cancel;
-        public InputAction @Help => m_Wrapper.m_Player_Help;
-        public InputAction @Escape => m_Wrapper.m_Player_Escape;
+        public InputAction @North => m_Wrapper.m_Player_North;
+        public InputAction @South => m_Wrapper.m_Player_South;
+        public InputAction @West => m_Wrapper.m_Player_West;
+        public InputAction @East => m_Wrapper.m_Player_East;
+        public InputAction @Back => m_Wrapper.m_Player_Back;
+        public InputAction @Start => m_Wrapper.m_Player_Start;
         public InputAction @Cheat => m_Wrapper.m_Player_Cheat;
         public InputAction @Navigate => m_Wrapper.m_Player_Navigate;
         public InputAction @Point => m_Wrapper.m_Player_Point;
@@ -709,18 +678,24 @@ public partial class @PInput: IInputActionCollection2, IDisposable
             @Right.started += instance.OnRight;
             @Right.performed += instance.OnRight;
             @Right.canceled += instance.OnRight;
-            @Confirm.started += instance.OnConfirm;
-            @Confirm.performed += instance.OnConfirm;
-            @Confirm.canceled += instance.OnConfirm;
-            @Cancel.started += instance.OnCancel;
-            @Cancel.performed += instance.OnCancel;
-            @Cancel.canceled += instance.OnCancel;
-            @Help.started += instance.OnHelp;
-            @Help.performed += instance.OnHelp;
-            @Help.canceled += instance.OnHelp;
-            @Escape.started += instance.OnEscape;
-            @Escape.performed += instance.OnEscape;
-            @Escape.canceled += instance.OnEscape;
+            @North.started += instance.OnNorth;
+            @North.performed += instance.OnNorth;
+            @North.canceled += instance.OnNorth;
+            @South.started += instance.OnSouth;
+            @South.performed += instance.OnSouth;
+            @South.canceled += instance.OnSouth;
+            @West.started += instance.OnWest;
+            @West.performed += instance.OnWest;
+            @West.canceled += instance.OnWest;
+            @East.started += instance.OnEast;
+            @East.performed += instance.OnEast;
+            @East.canceled += instance.OnEast;
+            @Back.started += instance.OnBack;
+            @Back.performed += instance.OnBack;
+            @Back.canceled += instance.OnBack;
+            @Start.started += instance.OnStart;
+            @Start.performed += instance.OnStart;
+            @Start.canceled += instance.OnStart;
             @Cheat.started += instance.OnCheat;
             @Cheat.performed += instance.OnCheat;
             @Cheat.canceled += instance.OnCheat;
@@ -758,18 +733,24 @@ public partial class @PInput: IInputActionCollection2, IDisposable
             @Right.started -= instance.OnRight;
             @Right.performed -= instance.OnRight;
             @Right.canceled -= instance.OnRight;
-            @Confirm.started -= instance.OnConfirm;
-            @Confirm.performed -= instance.OnConfirm;
-            @Confirm.canceled -= instance.OnConfirm;
-            @Cancel.started -= instance.OnCancel;
-            @Cancel.performed -= instance.OnCancel;
-            @Cancel.canceled -= instance.OnCancel;
-            @Help.started -= instance.OnHelp;
-            @Help.performed -= instance.OnHelp;
-            @Help.canceled -= instance.OnHelp;
-            @Escape.started -= instance.OnEscape;
-            @Escape.performed -= instance.OnEscape;
-            @Escape.canceled -= instance.OnEscape;
+            @North.started -= instance.OnNorth;
+            @North.performed -= instance.OnNorth;
+            @North.canceled -= instance.OnNorth;
+            @South.started -= instance.OnSouth;
+            @South.performed -= instance.OnSouth;
+            @South.canceled -= instance.OnSouth;
+            @West.started -= instance.OnWest;
+            @West.performed -= instance.OnWest;
+            @West.canceled -= instance.OnWest;
+            @East.started -= instance.OnEast;
+            @East.performed -= instance.OnEast;
+            @East.canceled -= instance.OnEast;
+            @Back.started -= instance.OnBack;
+            @Back.performed -= instance.OnBack;
+            @Back.canceled -= instance.OnBack;
+            @Start.started -= instance.OnStart;
+            @Start.performed -= instance.OnStart;
+            @Start.canceled -= instance.OnStart;
             @Cheat.started -= instance.OnCheat;
             @Cheat.performed -= instance.OnCheat;
             @Cheat.canceled -= instance.OnCheat;
@@ -814,10 +795,12 @@ public partial class @PInput: IInputActionCollection2, IDisposable
         void OnDown(InputAction.CallbackContext context);
         void OnLeft(InputAction.CallbackContext context);
         void OnRight(InputAction.CallbackContext context);
-        void OnConfirm(InputAction.CallbackContext context);
-        void OnCancel(InputAction.CallbackContext context);
-        void OnHelp(InputAction.CallbackContext context);
-        void OnEscape(InputAction.CallbackContext context);
+        void OnNorth(InputAction.CallbackContext context);
+        void OnSouth(InputAction.CallbackContext context);
+        void OnWest(InputAction.CallbackContext context);
+        void OnEast(InputAction.CallbackContext context);
+        void OnBack(InputAction.CallbackContext context);
+        void OnStart(InputAction.CallbackContext context);
         void OnCheat(InputAction.CallbackContext context);
         void OnNavigate(InputAction.CallbackContext context);
         void OnPoint(InputAction.CallbackContext context);

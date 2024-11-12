@@ -14,15 +14,15 @@ public class PlayerIceState : PlayerBaseState
     }
     public override void UpdateState(Player player)
     {
-        if (player.systemSetting.PressEscape())
+        if (player.systemSetting.PressBack())
         {
             player.EnablePauseMenu();
             player.SwitchState(player.pauseState);
             return;
         }
-        if (player.currentInput != "")
+        if (player.currentDirInput != "")
         {
-            switch (player.currentInput)
+            switch (player.currentDirInput)
             {
                 case "Up":
                     break;
@@ -44,10 +44,6 @@ public class PlayerIceState : PlayerBaseState
                     player.SwitchState(player.movementState);
                     break;
             }
-        }
-        else if (player.systemSetting.PressCancel())
-        {
-            player.SwitchState(player.movementState);
         }
     }
     public override void ExitState(Player player)

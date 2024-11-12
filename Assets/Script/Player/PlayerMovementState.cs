@@ -12,19 +12,32 @@ public class PlayerMovementState : PlayerBaseState
     }
     public override void UpdateState(Player player)
     {
-        if (player.systemSetting.PressHelp())
+        if (player.systemSetting.PressStart())
         {
             player.SwitchState(player.pauseState);
             player.EnableRecipes();
             return;
         }
-        if (player.systemSetting.PressEscape())
+        if (player.systemSetting.PressBack())
         {
             player.SwitchState(player.pauseState);
             player.EnablePauseMenu();
             return;
         }
-        switch (player.currentInput)
+        switch (player.currentMovInput)
+        {
+            case "Left":
+                if (Physics2D.OverlapPoint(player.transform.position + Vector3.left, LayerMask.GetMask("Ground")))
+                    player.transform.position += Vector3.left * 1.25f;
+                CheckForObj(player.transform.position, player);
+                break;
+            case "Right":
+                if (Physics2D.OverlapPoint(player.transform.position + Vector3.right, LayerMask.GetMask("Ground")))
+                    player.transform.position += Vector3.right * 1.25f;
+                CheckForObj(player.transform.position, player);
+                break;
+        }
+        switch (player.currentDirInput)
         {
             case "Up":
                 if (!player.systemSetting.firstRecipe)
@@ -43,16 +56,6 @@ public class PlayerMovementState : PlayerBaseState
                     player.ChangeArrowPos("Down");
                     highlightObjD.Interact(player);
                 }
-                break;
-            case "Left":
-                if (Physics2D.OverlapPoint(player.transform.position + Vector3.left, LayerMask.GetMask("Ground")))
-                    player.transform.position += Vector3.left * 1.25f;
-                CheckForObj(player.transform.position, player);
-                break;
-            case "Right":
-                if (Physics2D.OverlapPoint(player.transform.position + Vector3.right, LayerMask.GetMask("Ground")))
-                    player.transform.position += Vector3.right * 1.25f;
-                CheckForObj(player.transform.position, player);
                 break;
         }
     }

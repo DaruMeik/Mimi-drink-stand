@@ -428,9 +428,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<align=center>Today Menu</align>\n- Hot Coffee <sprite name=ItemSprite_19>
-    \n- Iced Coffee <sprite name=ItemSprite_24>\n- Hot Latte <sprite name=ItemSprite_21>
-    <NEW!>\n- Iced Latte <sprite name=ItemSprite_26> <NEW!>"
+  m_text: "<align=center>Today Menu</align>\n- Hot Coffee/Latte <sprite name=ItemSprite_19>
+    / <sprite name=ItemSprite_21>  \n- Iced Coffee/Latte <sprite name=ItemSprite_24>
+    / <sprite name=ItemSprite_26>  \n- Iced Soda <sprite name=ItemSprite_27>\n- Flavored
+    Soda <sprite name=ItemSprite_28> / <sprite name=ItemSprite_29> / <sprite name=ItemSprite_30>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a8fc7761093973a46806e138f9411079, type: 2}
   m_sharedMaterial: {fileID: 1245998524349090921, guid: a8fc7761093973a46806e138f9411079, type: 2}
@@ -564,13 +565,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<align=center>Day 2</align>
-
-    - Congrats on finishing your first day.
-
-    -
-    With how successful yesterday was, you have decided to add new drinks to the
-    menu!'
+  m_text: "<align=center>Day 6</align>\n- You feel like today will be a busy day.
+    \n- No new drink for today, but all drinks on the menu will be available."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a8fc7761093973a46806e138f9411079, type: 2}
   m_sharedMaterial: {fileID: 1245998524349090921, guid: a8fc7761093973a46806e138f9411079, type: 2}
@@ -915,7 +911,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1503869655728362595, guid: 4ae0e5fdb9d43124fae52303e45bb181, type: 3}
       propertyPath: pages.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1503869655728362595, guid: 4ae0e5fdb9d43124fae52303e45bb181, type: 3}
       propertyPath: pages.Array.data[1]
@@ -925,6 +921,14 @@ PrefabInstance:
       propertyPath: pages.Array.data[2]
       value: 
       objectReference: {fileID: 672319487}
+    - target: {fileID: 1503869655728362595, guid: 4ae0e5fdb9d43124fae52303e45bb181, type: 3}
+      propertyPath: pages.Array.data[3]
+      value: 
+      objectReference: {fileID: 672319490}
+    - target: {fileID: 1503869655728362595, guid: 4ae0e5fdb9d43124fae52303e45bb181, type: 3}
+      propertyPath: pages.Array.data[4]
+      value: 
+      objectReference: {fileID: 672319489}
     - target: {fileID: 4097460941058347591, guid: 4ae0e5fdb9d43124fae52303e45bb181, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -960,6 +964,16 @@ GameObject:
 --- !u!1 &672319488 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1187477152323407250, guid: 4ae0e5fdb9d43124fae52303e45bb181, type: 3}
+  m_PrefabInstance: {fileID: 672319484}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &672319489 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4097460941058347591, guid: 4ae0e5fdb9d43124fae52303e45bb181, type: 3}
+  m_PrefabInstance: {fileID: 672319484}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &672319490 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6441555016607348093, guid: 4ae0e5fdb9d43124fae52303e45bb181, type: 3}
   m_PrefabInstance: {fileID: 672319484}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &764548910 stripped
@@ -1656,7 +1670,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1978666224
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2824,6 +2838,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SettingPage
       objectReference: {fileID: 0}
+    - target: {fileID: 1673024725633979845, guid: 9806946445c1e3c45aca0ee7efa7e94c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7186378939026396145, guid: 9806946445c1e3c45aca0ee7efa7e94c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3028,7 +3046,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8394630346757514279, guid: 0a0835f3b92cb8e409a524bb4d1d4095, type: 3}
       propertyPath: maxTime
-      value: 45
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8394630346757514279, guid: 0a0835f3b92cb8e409a524bb4d1d4095, type: 3}
       propertyPath: dayTutorial
@@ -3036,11 +3054,11 @@ PrefabInstance:
       objectReference: {fileID: 1978666223}
     - target: {fileID: 8394630346757514279, guid: 0a0835f3b92cb8e409a524bb4d1d4095, type: 3}
       propertyPath: orderList.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8394630346757514279, guid: 0a0835f3b92cb8e409a524bb4d1d4095, type: 3}
       propertyPath: orderList.Array.data[2]
-      value: Hot Latte
+      value: Iced Coffee
       objectReference: {fileID: 0}
     - target: {fileID: 8394630346757514279, guid: 0a0835f3b92cb8e409a524bb4d1d4095, type: 3}
       propertyPath: orderList.Array.data[3]
@@ -3055,12 +3073,28 @@ PrefabInstance:
       value: Iced Latte
       objectReference: {fileID: 0}
     - target: {fileID: 8394630346757514279, guid: 0a0835f3b92cb8e409a524bb4d1d4095, type: 3}
+      propertyPath: orderList.Array.data[6]
+      value: Iced Soda
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394630346757514279, guid: 0a0835f3b92cb8e409a524bb4d1d4095, type: 3}
+      propertyPath: orderList.Array.data[7]
+      value: Iced Soda
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394630346757514279, guid: 0a0835f3b92cb8e409a524bb4d1d4095, type: 3}
       propertyPath: orderList.Array.data[0].order.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8394630346757514279, guid: 0a0835f3b92cb8e409a524bb4d1d4095, type: 3}
       propertyPath: orderList.Array.data[1].order.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394630346757514279, guid: 0a0835f3b92cb8e409a524bb4d1d4095, type: 3}
+      propertyPath: orderList.Array.data[2].order.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394630346757514279, guid: 0a0835f3b92cb8e409a524bb4d1d4095, type: 3}
+      propertyPath: orderList.Array.data[3].order.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8394630346757514279, guid: 0a0835f3b92cb8e409a524bb4d1d4095, type: 3}
       propertyPath: orderList.Array.data[0].order.Array.data[0]
@@ -3077,6 +3111,22 @@ PrefabInstance:
     - target: {fileID: 8394630346757514279, guid: 0a0835f3b92cb8e409a524bb4d1d4095, type: 3}
       propertyPath: orderList.Array.data[1].order.Array.data[1]
       value: Iced Latte
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394630346757514279, guid: 0a0835f3b92cb8e409a524bb4d1d4095, type: 3}
+      propertyPath: orderList.Array.data[2].order.Array.data[0]
+      value: Iced Soda
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394630346757514279, guid: 0a0835f3b92cb8e409a524bb4d1d4095, type: 3}
+      propertyPath: orderList.Array.data[3].order.Array.data[0]
+      value: Strawberry Soda
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394630346757514279, guid: 0a0835f3b92cb8e409a524bb4d1d4095, type: 3}
+      propertyPath: orderList.Array.data[3].order.Array.data[1]
+      value: Kiwi Soda
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394630346757514279, guid: 0a0835f3b92cb8e409a524bb4d1d4095, type: 3}
+      propertyPath: orderList.Array.data[3].order.Array.data[2]
+      value: Blueberry Soda
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

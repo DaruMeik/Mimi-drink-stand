@@ -43,6 +43,7 @@ public class Player : MonoBehaviour
 
     [Header("Scriptable Obj")]
     public SystemSetting systemSetting;
+    public DayLogic dayLogic;
     public EventBroadcast eventBroadcast;
 
     private void OnEnable()
@@ -163,6 +164,8 @@ public class Player : MonoBehaviour
     }
     private void ResultScreen()
     {
+        if (dayLogic.HP <= 0)
+            return;
         resultPage.daySuccess = true;
         resultPage.gameObject.SetActive(true);
         SwitchState(endState);

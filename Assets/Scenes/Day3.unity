@@ -186,7 +186,7 @@ MonoBehaviour:
 
 
 
-    Press <sprite name=Help> to see the recipe book.'
+    Press <sprite name=Start> to see the recipe book.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a8fc7761093973a46806e138f9411079, type: 2}
   m_sharedMaterial: {fileID: 1245998524349090921, guid: a8fc7761093973a46806e138f9411079, type: 2}
@@ -428,9 +428,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<align=center>Today Menu</align>\n- Hot Coffee/Latte <sprite name=ItemSprite_19>
-    / <sprite name=ItemSprite_21>  \n- Iced Coffee/Latte <sprite name=ItemSprite_24>
-    / <sprite name=ItemSprite_26>  \n- Iced Soda <sprite name=ItemSprite_27> <NEW!>"
+  m_text: '<align=center>Today Menu</align>
+
+    - Hot Coffee <sprite name=ItemSprite_19>
+
+    -
+    Iced Coffee <sprite name=ItemSprite_24>
+
+    - Iced Soda <sprite name=ItemSprite_27>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a8fc7761093973a46806e138f9411079, type: 2}
   m_sharedMaterial: {fileID: 1245998524349090921, guid: a8fc7761093973a46806e138f9411079, type: 2}
@@ -566,11 +571,10 @@ MonoBehaviour:
       m_Calls: []
   m_text: '<align=center>Day 4</align>
 
-    - Summer has come to your town. Cool
-    drink will be on high demand.
+    - It''s April''s Fool. Here comes a little
+    trick.
 
-    - You have added another new drink to the
-    menu!'
+    - You will have to serve drinks in the menu that is not being ordered.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a8fc7761093973a46806e138f9411079, type: 2}
   m_sharedMaterial: {fileID: 1245998524349090921, guid: a8fc7761093973a46806e138f9411079, type: 2}
@@ -915,7 +919,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1503869655728362595, guid: 4ae0e5fdb9d43124fae52303e45bb181, type: 3}
       propertyPath: pages.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1503869655728362595, guid: 4ae0e5fdb9d43124fae52303e45bb181, type: 3}
       propertyPath: pages.Array.data[1]
@@ -925,6 +929,10 @@ PrefabInstance:
       propertyPath: pages.Array.data[2]
       value: 
       objectReference: {fileID: 672319487}
+    - target: {fileID: 1503869655728362595, guid: 4ae0e5fdb9d43124fae52303e45bb181, type: 3}
+      propertyPath: pages.Array.data[3]
+      value: 
+      objectReference: {fileID: 672319489}
     - target: {fileID: 4097460941058347591, guid: 4ae0e5fdb9d43124fae52303e45bb181, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -960,6 +968,11 @@ GameObject:
 --- !u!1 &672319488 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1187477152323407250, guid: 4ae0e5fdb9d43124fae52303e45bb181, type: 3}
+  m_PrefabInstance: {fileID: 672319484}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &672319489 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6441555016607348093, guid: 4ae0e5fdb9d43124fae52303e45bb181, type: 3}
   m_PrefabInstance: {fileID: 672319484}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &764548910 stripped
@@ -1481,22 +1494,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
+  m_SendPointerHoverToParent: 0
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
   m_XRTrackingOrigin: {fileID: 0}
   m_ActionsAsset: {fileID: -944628639613478452, guid: 94d3e00053f60b045a423579143f7cc9, type: 3}
   m_PointAction: {fileID: -2806416773838682405, guid: 94d3e00053f60b045a423579143f7cc9, type: 3}
   m_MoveAction: {fileID: -4595501056105907787, guid: 94d3e00053f60b045a423579143f7cc9, type: 3}
-  m_SubmitAction: {fileID: -8885039825080501291, guid: 94d3e00053f60b045a423579143f7cc9, type: 3}
-  m_CancelAction: {fileID: -1239505044377773986, guid: 94d3e00053f60b045a423579143f7cc9, type: 3}
+  m_SubmitAction: {fileID: -1239505044377773986, guid: 94d3e00053f60b045a423579143f7cc9, type: 3}
+  m_CancelAction: {fileID: -8885039825080501291, guid: 94d3e00053f60b045a423579143f7cc9, type: 3}
   m_LeftClickAction: {fileID: -6319366478160743907, guid: 94d3e00053f60b045a423579143f7cc9, type: 3}
   m_MiddleClickAction: {fileID: 3623121156812181391, guid: 94d3e00053f60b045a423579143f7cc9, type: 3}
   m_RightClickAction: {fileID: -595682413225631533, guid: 94d3e00053f60b045a423579143f7cc9, type: 3}
   m_ScrollWheelAction: {fileID: -4331007009337994611, guid: 94d3e00053f60b045a423579143f7cc9, type: 3}
   m_TrackedDevicePositionAction: {fileID: 1726639390436044556, guid: 94d3e00053f60b045a423579143f7cc9, type: 3}
   m_TrackedDeviceOrientationAction: {fileID: 4152154199177809983, guid: 94d3e00053f60b045a423579143f7cc9, type: 3}
-  m_DeselectOnBackgroundClick: 1
+  m_DeselectOnBackgroundClick: 0
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
 --- !u!4 &1898589876 stripped
@@ -1561,7 +1574,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press <sprite name=Confirm> to continue
+  m_text: Press <sprite name=South> to continue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a8fc7761093973a46806e138f9411079, type: 2}
   m_sharedMaterial: {fileID: 1245998524349090921, guid: a8fc7761093973a46806e138f9411079, type: 2}
@@ -1969,6 +1982,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 672319486}
     - target: {fileID: 6350046395314507746, guid: 26019d0e992167a439b50ecd982d1be0, type: 3}
+      propertyPath: dayLogic
+      value: 
+      objectReference: {fileID: 293277057}
+    - target: {fileID: 6350046395314507746, guid: 26019d0e992167a439b50ecd982d1be0, type: 3}
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 1338518309}
@@ -2037,6 +2054,10 @@ PrefabInstance:
       propertyPath: dayLogic
       value: 
       objectReference: {fileID: 293277057}
+    - target: {fileID: 7080624209158183747, guid: 3d821fdabe8e78e43a1cedb085870830, type: 3}
+      propertyPath: customerObj
+      value: 
+      objectReference: {fileID: 7364858580858829922, guid: 87d094a96250d0a49a07891defabd456, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2824,26 +2845,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2488855585920205484, guid: 9806946445c1e3c45aca0ee7efa7e94c, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2488855585920205484, guid: 9806946445c1e3c45aca0ee7efa7e94c, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6968386020166105798, guid: 9806946445c1e3c45aca0ee7efa7e94c, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6968386020166105798, guid: 9806946445c1e3c45aca0ee7efa7e94c, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6968386020166105798, guid: 9806946445c1e3c45aca0ee7efa7e94c, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7186378939026396145, guid: 9806946445c1e3c45aca0ee7efa7e94c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3056,15 +3057,15 @@ PrefabInstance:
       objectReference: {fileID: 1978666223}
     - target: {fileID: 8394630346757514279, guid: 0a0835f3b92cb8e409a524bb4d1d4095, type: 3}
       propertyPath: orderList.Array.size
-      value: 8
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8394630346757514279, guid: 0a0835f3b92cb8e409a524bb4d1d4095, type: 3}
       propertyPath: orderList.Array.data[2]
-      value: Iced Coffee
+      value: Iced Soda
       objectReference: {fileID: 0}
     - target: {fileID: 8394630346757514279, guid: 0a0835f3b92cb8e409a524bb4d1d4095, type: 3}
       propertyPath: orderList.Array.data[3]
-      value: Hot Latte
+      value: Iced Soda
       objectReference: {fileID: 0}
     - target: {fileID: 8394630346757514279, guid: 0a0835f3b92cb8e409a524bb4d1d4095, type: 3}
       propertyPath: orderList.Array.data[4]
@@ -3080,6 +3081,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8394630346757514279, guid: 0a0835f3b92cb8e409a524bb4d1d4095, type: 3}
       propertyPath: orderList.Array.data[7]
+      value: Iced Soda
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394630346757514279, guid: 0a0835f3b92cb8e409a524bb4d1d4095, type: 3}
+      propertyPath: orderList.Array.data[0].order.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394630346757514279, guid: 0a0835f3b92cb8e409a524bb4d1d4095, type: 3}
+      propertyPath: orderList.Array.data[1].order.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394630346757514279, guid: 0a0835f3b92cb8e409a524bb4d1d4095, type: 3}
+      propertyPath: orderList.Array.data[2].order.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394630346757514279, guid: 0a0835f3b92cb8e409a524bb4d1d4095, type: 3}
+      propertyPath: orderList.Array.data[0].order.Array.data[0]
+      value: Hot Coffee
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394630346757514279, guid: 0a0835f3b92cb8e409a524bb4d1d4095, type: 3}
+      propertyPath: orderList.Array.data[1].order.Array.data[0]
+      value: Iced Coffee
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394630346757514279, guid: 0a0835f3b92cb8e409a524bb4d1d4095, type: 3}
+      propertyPath: orderList.Array.data[2].order.Array.data[0]
       value: Iced Soda
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3293,11 +3318,56 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2280096455749835336, guid: eca7a0d58c9cb40469fb2f35c325434e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8791627808258080050, guid: eca7a0d58c9cb40469fb2f35c325434e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7391921992027679805}
   m_SourcePrefab: {fileID: 100100000, guid: eca7a0d58c9cb40469fb2f35c325434e, type: 3}
+--- !u!82 &7391921992027679801 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6860764310196492118, guid: eca7a0d58c9cb40469fb2f35c325434e, type: 3}
+  m_PrefabInstance: {fileID: 7391921992027679800}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &7391921992027679802 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4588139974398871228, guid: eca7a0d58c9cb40469fb2f35c325434e, type: 3}
+  m_PrefabInstance: {fileID: 7391921992027679800}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7391921992027679803 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8791627808258080050, guid: eca7a0d58c9cb40469fb2f35c325434e, type: 3}
+  m_PrefabInstance: {fileID: 7391921992027679800}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &7391921992027679804 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 7908603051605684917, guid: eca7a0d58c9cb40469fb2f35c325434e, type: 3}
+  m_PrefabInstance: {fileID: 7391921992027679800}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7391921992027679805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7391921992027679803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd0a9c22b4ea94442b9bb18299281d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalSprite: {fileID: -1645298211, guid: 4d428bd0e424f7f43b334eb10fd37b2c, type: 3}
+  highlightSprite: {fileID: 1169568823, guid: 4d428bd0e424f7f43b334eb10fd37b2c, type: 3}
+  sr: {fileID: 7391921992027679804}
+  itemLibrary: {fileID: 11400000, guid: b494ee815718aa345af8b0bafcac6987, type: 2}
+  systemSetting: {fileID: 11400000, guid: abeb3f85073a128498e8214975bf9082, type: 2}
+  dayLogic: {fileID: 293277057}
+  success: {fileID: 7391921992027679802}
+  fail: {fileID: 7391921992027679801}
+  eventBroadcast: {fileID: 11400000, guid: 204fade9e66f1594cba0b9dc8b679654, type: 2}
 --- !u!1001 &8036470510677876529
 PrefabInstance:
   m_ObjectHideFlags: 0

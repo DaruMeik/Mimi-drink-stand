@@ -1,10 +1,13 @@
 using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 
 public class SaveData
 {
+    public string userName = "";
     public List<int> highestScores;
     public bool firstRecipe = false;
     public bool finishFirstDay = false;
@@ -34,6 +37,7 @@ public class SystemSetting : ScriptableObject
     public inputDisplay display = inputDisplay.MnK;
 
     [Header("SaveData")]
+    public string userName;
     public string saveFilePath;
     public SaveData saveData = new SaveData();
 
@@ -45,7 +49,9 @@ public class SystemSetting : ScriptableObject
 
     private void OnEnable()
     {
-        saveFilePath = Application.persistentDataPath + "/PlayerData.json";
+        saveFilePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+        System.IO.Directory.CreateDirectory(saveFilePath + "/SaveData");
+        saveFilePath += "/SaveData/PlayerData.json";
         playerInput = new PInput();
         playerInput.Player.Enable();
 
@@ -55,6 +61,8 @@ public class SystemSetting : ScriptableObject
         }
         else
         {
+            Debug.Log("Start a new save!");
+            userName = "";
             ChangeVolume(1f, 1f, 1f);
             display = inputDisplay.MnK;
             finishBaseGame = false;
@@ -62,6 +70,7 @@ public class SystemSetting : ScriptableObject
             highestScores.Add(0);
             NewGame();
         }
+        InputSystem.onActionChange += ChangeInputCallBack;
     }
     public void NewGame()
     {
@@ -76,6 +85,24 @@ public class SystemSetting : ScriptableObject
         this.sfxVolume = sfxVolume;
         eventBroadcast.ChangeVolumeNoti();
     }
+    public void ChangeInputCallBack(object obj, InputActionChange change)
+    {
+        if (change == InputActionChange.ActionPerformed)
+        {
+            InputAction receivedInputAction = (InputAction)obj;
+            InputDevice lastDevice = receivedInputAction.activeControl.device;
+
+            string currentInputDevice = (display == inputDisplay.MnK) ? "Keyboard" : "Controller";
+            if(currentInputDevice == "Keyboard" && lastDevice.displayName != "Keyboard" && lastDevice.displayName != "Mouse")
+            {
+                ChangeInput();
+            }
+            else if(currentInputDevice == "Controller" && lastDevice.displayName != "XBox Controller" && lastDevice.displayName != "Wireless Controller")
+            {
+                ChangeInput();
+            }
+        }
+    }
     public void ChangeInput()
     {
         if (display == inputDisplay.MnK)
@@ -84,9 +111,16 @@ public class SystemSetting : ScriptableObject
             display = inputDisplay.MnK;
         eventBroadcast.ChangeInputNoti();
     }
+    public void ChangeUserName(string name)
+    {
+        userName = name;
+        Debug.Log("Hello");
+        eventBroadcast.ChangeNameNoti();
+    }
     public void SaveGame()
     {
         // Update Save Data
+        saveData.userName = userName;
         saveData.highestScores = highestScores;
         saveData.firstRecipe = firstRecipe;
         saveData.finishFirstDay = finishFirstDay;
@@ -108,6 +142,7 @@ public class SystemSetting : ScriptableObject
         Debug.LogWarning("Load game complete!");
 
         // Update Save Data
+        userName = saveData.userName;
         highestScores = saveData.highestScores;
         firstRecipe = saveData.firstRecipe;
         finishFirstDay = saveData.finishFirstDay;

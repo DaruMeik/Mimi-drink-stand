@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class TitleScreen : MonoBehaviour
 {
@@ -13,7 +14,10 @@ public class TitleScreen : MonoBehaviour
     [SerializeField] private Button extraButton;
     [SerializeField] private Button settingButton;
     [SerializeField] private Button quitButton;
+    [SerializeField] private TextMeshProUGUI userName;
+    [SerializeField] private GameObject nameInput;
     [SerializeField] private GameObject settingPage;
+    [SerializeField] private EventBroadcast eventBroadcast;
     public void OnEnable()
     {
         Navigation newGameNav = new Navigation(), quitNav = new Navigation();
@@ -35,6 +39,29 @@ public class TitleScreen : MonoBehaviour
         }
         newGameButton.navigation = newGameNav;
         quitButton.navigation = quitNav;
+
+        if (string.IsNullOrEmpty(systemSetting.userName))
+        {
+            nameInput.SetActive(true);
+        }
+        UpdateName();
+        eventBroadcast.changeName += UpdateName;
+    }
+    private void OnDisable()
+    {
+        eventBroadcast.changeName -= UpdateName;
+    }
+    private void Update()
+    {
+        // Temporarily disable leader board
+        //if (systemSetting.PressStart() && !nameInput.activeSelf)
+        //{
+        //    nameInput.SetActive(true);
+        //}
+    }
+    private void UpdateName()
+    {
+        userName.text = "Name: " + systemSetting.userName; // + " (Press <sprite name=Start> to change)";
     }
     public void NewGame()
     {

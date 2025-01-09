@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class DayLogic : MonoBehaviour
 {
-    public string[] orderList;
+    public OrderList[] orderList;
     public int maxTime = 90;
     public float minHype = 0f;
     public float hypeDepleteSpeed = 5f;
     public float hypeMultiplier { get; private set; }
+    public int currentCustomer { get; private set; }
     public int currentMoney { get; private set; }
     public float startTime { get; private set; }
     public float hypeMeter { get; private set; }
@@ -45,6 +46,10 @@ public class DayLogic : MonoBehaviour
         }
         hypeMeter = Mathf.Max(0, hypeMeter - Time.deltaTime * 0.001f * hypeDepleteSpeed * Mathf.CeilToInt(hypeMeter));
         hypeMultiplier = 1f + Mathf.FloorToInt(hypeMeter) * 0.25f;
+    }
+    public void IncreaseCustomer()
+    {
+        currentCustomer++;
     }
     public void AdjustMoney(int amount)
     {

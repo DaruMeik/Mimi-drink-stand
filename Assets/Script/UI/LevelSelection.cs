@@ -107,10 +107,13 @@ public class LevelSelection : MonoBehaviour
                 menu += "<sprite name=ItemSprite_19>  <sprite name=ItemSprite_21>  <sprite name=ItemSprite_24>  <sprite name=ItemSprite_26>  <sprite name=ItemSprite_27>\n";
                 break;
             case 3:
-                menu += "<sprite name=ItemSprite_28> <sprite name=ItemSprite_29> <sprite name=ItemSprite_30>\n";
+                menu += "<sprite name=ItemSprite_19>  <sprite name=ItemSprite_24>  <sprite name=ItemSprite_27>\n";
                 break;
             case 4:
-                menu += "<sprite name=ItemSprite_19>  <sprite name=ItemSprite_21>  <sprite name=ItemSprite_24>  <sprite name=ItemSprite_26> <sprite name=ItemSprite_28> <sprite name=ItemSprite_29> <sprite name=ItemSprite_30>\n";
+                menu += "<sprite name=ItemSprite_28>  <sprite name=ItemSprite_29>  <sprite name=ItemSprite_30>\n";
+                break;
+            case 5:
+                menu += "<sprite name=ItemSprite_19>  <sprite name=ItemSprite_21>  <sprite name=ItemSprite_24>  <sprite name=ItemSprite_26>  <sprite name=ItemSprite_28>  <sprite name=ItemSprite_29>  <sprite name=ItemSprite_30>\n";
                 break;
         }
 

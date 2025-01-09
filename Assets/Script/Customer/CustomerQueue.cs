@@ -10,7 +10,6 @@ public class CustomerQueue : MonoBehaviour
     private Customer[] customerPool;
     private int poolPointer = 0;
     private float lastSpawnTime = 0;
-    private bool firstCustomer = true;
     private bool isClose = false;
 
     private void OnEnable()
@@ -28,7 +27,6 @@ public class CustomerQueue : MonoBehaviour
     private void Awake()
     {
         lastSpawnTime = Time.time + 2f;
-        firstCustomer = true;
         poolPointer = 0;
         customerPool = new Customer[queuePos.Length];
         for (int i = 0; i < customerPool.Length; i++)
@@ -47,12 +45,11 @@ public class CustomerQueue : MonoBehaviour
         {
             if (Time.time - lastSpawnTime > 0 && !customerPool[poolPointer].gameObject.activeSelf)
             {
-                if (firstCustomer)
+                if (dayLogic.currentCustomer == 0)
                 {
-                    firstCustomer = false;
                     eventBroadcast.StoreOpenNoti();
                 }
-                lastSpawnTime = Time.time + 1f + 1f * (1 - Mathf.Clamp01(dayLogic.hypeMeter/2f));
+                lastSpawnTime = Time.time + 1.5f + 1.5f * (1 - Mathf.Clamp01(dayLogic.hypeMeter/2f));
                 SpawnCustomer(customerPool[poolPointer]);
                 poolPointer++;
                 if (poolPointer >= customerPool.Length)
@@ -83,6 +80,7 @@ public class CustomerQueue : MonoBehaviour
                 customer.gameObject.SetActive(true);
                 queuePos[i].SetActive(false);
                 customer.ChangeTarget(i);
+                dayLogic.IncreaseCustomer();
                 break;
             }
 

@@ -36,7 +36,8 @@ public class DayEndResult : MonoBehaviour
         if (daySuccess)
         {
             systemSetting.highestScores[systemSetting.currentRound] = Mathf.Max(systemSetting.highestScores[systemSetting.currentRound], dayLogic.currentMoney);
-            systemSetting.highestScores.Add(0);
+            if(systemSetting.highestScores.Count - 1 == systemSetting.currentRound)
+                systemSetting.highestScores.Add(0);
             systemSetting.finishFirstDay = true;
             foreach (GameObject gObj in successButton)
             {
@@ -51,7 +52,7 @@ public class DayEndResult : MonoBehaviour
             textMesh.text += "- Today earning: " + (dayLogic.currentMoney) + "\n";
             textMesh.text += "- Failed order: " + (3 - dayLogic.HP) + "\n";
             textMesh.text += "-------------------------\n";
-            textMesh.text += "\n\n";
+            textMesh.text += "\n";
             textMesh.text += "- Rating: ";
 
             // Check star

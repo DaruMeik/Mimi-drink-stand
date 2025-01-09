@@ -19,6 +19,7 @@ public class EventBroadcast : ScriptableObject
     public event VoidEvent turnOffPauseMenu;
     public event VoidEvent returnable;
 
+    public event VoidEvent changeName;
     public event VoidEvent changeVolume;
     public event VoidEvent changeInput;
 
@@ -86,6 +87,11 @@ public class EventBroadcast : ScriptableObject
     {
         if (turnOffPauseMenu != null)
             turnOffPauseMenu.Invoke();
+    }
+    public void ChangeNameNoti()
+    {
+        if(changeName != null)
+            changeName.Invoke();
     }
     public void ChangeVolumeNoti()
     {

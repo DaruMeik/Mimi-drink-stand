@@ -37,7 +37,8 @@ public class Customer : MonoBehaviour
         thoughtItem.gameObject.SetActive(false);
         if (dayLogic != null)
         {
-            string s = dayLogic.orderList[UnityEngine.Random.Range(0, dayLogic.orderList.Length)];
+            int index = Mathf.FloorToInt((float)Math.PI * Mathf.Pow(10, (dayLogic.currentCustomer)%7)) % 10 % dayLogic.orderList.Length;
+            string s = dayLogic.orderList[index].order[UnityEngine.Random.Range(0, dayLogic.orderList[index].order.Length)];
             DecideOrder(Array.Find(itemLibrary.itemLibrary, x => x.itemName == s));
             eventBroadcast.CreateOrderNoti(this);
         }

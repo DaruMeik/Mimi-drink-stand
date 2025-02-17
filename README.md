@@ -16,7 +16,7 @@
 Windows10/11　64bit版であればどの構築でも動作可能かと思われますが、保証はしかねます。
 
 ■ゲーム起動
-こちらの[リンク](https://drive.google.com/drive/folders/1Da7Dz57E3thokJWC4g4laN6heWmctO1G?usp=drive_link)で「MimiDrinkStand_Build」のフォルダをダウン路どして、
+こちらの[リンク](https://drive.google.com/drive/folders/1Da7Dz57E3thokJWC4g4laN6heWmctO1G?usp=drive_link)で「MimiDrinkStand_Build」のフォルダをダウンロードして、
 「MimiDrinkStand.exe」を実行してください。
 
 ■操作方法
